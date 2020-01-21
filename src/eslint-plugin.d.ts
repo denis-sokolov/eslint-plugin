@@ -1,0 +1,9 @@
+declare module "@typescript-eslint/eslint-plugin/dist/rules/no-non-null-assertion" {
+  const Rule: any;
+  export default Rule;
+}
+
+declare module "@typescript-eslint/eslint-plugin/utils/dist/ts-eslint/" {
+  const RuleTester: any;
+  export { RuleTester };
+}
