@@ -1,4 +1,5 @@
 import { AST_NODE_TYPES, Node, TSESTree } from "./types";
+import { flat } from "../flat";
 
 type Result = { name: string; node: Node }[];
 
@@ -24,21 +25,21 @@ export function variableNames(
   }
 
   if (includeDestructuring && expr.type === AST_NODE_TYPES.ArrayPattern) {
-    return expr.elements
-      .map(el => {
+    return flat(
+      expr.elements.map(el => {
         if (!el) return [];
         return variableNames(el, options);
       })
-      .flat();
+    );
   }
 
   if (includeDestructuring && expr.type === AST_NODE_TYPES.ObjectPattern) {
-    return expr.properties
-      .map(p => {
+    return flat(
+      expr.properties.map(p => {
         if (p.type !== AST_NODE_TYPES.Property) return [];
         return variableNames(p.value, options);
       })
-      .flat();
+    );
   }
 
   return [];

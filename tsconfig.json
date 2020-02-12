@@ -4,7 +4,7 @@
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": ["es2015", "es2016", "es2017", "es2018", "es2019"],
+    "lib": ["es2015", "es2016", "es2017", "es2018"],
     "module": "CommonJS",
     "moduleResolution": "node",
     "noImplicitReturns": true,

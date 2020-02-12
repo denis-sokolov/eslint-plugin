@@ -1,8 +1,9 @@
 import { AST_NODE_TYPES, Node } from "./types";
+import { flat } from "../flat";
 
 export function descendantsAndSelf(node: Node): Node[] {
   const andSelf = (...lists: Node[][]) => {
-    const res = lists.flat();
+    const res = flat(lists);
     res.push(node);
     return res;
   };
@@ -19,7 +20,7 @@ export function descendantsAndSelf(node: Node): Node[] {
   if (node.type === AST_NODE_TYPES.CallExpression) {
     return andSelf(
       descendantsAndSelf(node.callee),
-      node.arguments.map(descendantsAndSelf).flat()
+      flat(node.arguments.map(descendantsAndSelf))
     );
   }
 

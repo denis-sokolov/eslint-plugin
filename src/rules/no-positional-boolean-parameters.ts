@@ -1,5 +1,6 @@
 import { variableNames, Node } from "../ast";
 import { Rule } from "../eslint";
+import { flat } from "../flat";
 
 const rule: Rule = {
   create: function(context) {
@@ -21,13 +22,13 @@ const rule: Rule = {
     };
     return {
       ArrowFunctionExpression(node) {
-        validate(node.params.map(n => variableNames(n)).flat());
+        validate(flat(node.params.map(n => variableNames(n))));
       },
       FunctionExpression(node) {
-        validate(node.params.map(n => variableNames(n)).flat());
+        validate(flat(node.params.map(n => variableNames(n))));
       },
       FunctionDeclaration(node) {
-        validate(node.params.map(n => variableNames(n)).flat());
+        validate(flat(node.params.map(n => variableNames(n))));
       }
     };
   }
