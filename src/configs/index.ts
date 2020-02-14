@@ -27,22 +27,29 @@ const minimal = {
 
     "no-async-promise-executor": "error",
     "no-await-in-loop": "error",
+    "no-caller": "error",
     "no-compare-neg-zero": "error",
     "no-cond-assign": "error",
     "no-control-regex": "error",
     "no-debugger": "error",
     "no-dupe-args": "error",
+    "no-dupe-else-if": "error",
     "no-dupe-keys": "error",
     "no-duplicate-case": "error",
     "no-else-return": "error",
     "no-empty-character-class": "error",
     "no-import-assign": "error",
+    "no-iterator": "error",
     "no-invalid-regexp": "error",
     "no-irregular-whitespace": "error",
     "no-misleading-character-class": "error",
+    "no-self-compare": "error",
+    "no-setter-return": "error",
     "no-unexpected-multiline": "error",
+    "no-unmodified-loop-condition": "error",
     "no-unreachable": "error",
     "no-unsafe-negation": "error",
+    "require-atomic-updates": "error",
     "use-isnan": "error",
     "valid-typeof": "error"
   }
@@ -72,7 +79,12 @@ const recommended = {
     // Irrelevant with TypeScript
     "react/prop-types": "off",
 
+    "no-sequences": "error",
+    "no-shadow": "error",
+    "no-template-curly-in-string": "error",
+    "no-throw-literal": "error",
     "no-var": "error",
+    "prefer-promise-reject-errors": "error",
     "prefer-rest-params": "error",
     "prefer-spread": "error"
   },
@@ -94,7 +106,9 @@ const opinionated = {
 
     "react-hooks/exhaustive-deps": "error",
 
-    "prefer-const": "error"
+    eqeqeq: ["error", "smart"],
+    "prefer-const": "error",
+    yoda: "error"
   }
 };
 
