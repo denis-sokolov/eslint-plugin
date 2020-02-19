@@ -17,7 +17,6 @@ const minimal = {
     "@typescript-eslint/no-misused-new": "error",
     "@typescript-eslint/no-namespace": "error",
     "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
-    "@typescript-eslint/no-unused-expressions": "error",
     "@typescript-eslint/triple-slash-reference": [
       "error",
       { path: "never", types: "never", lib: "never" }
@@ -71,6 +70,7 @@ const recommended = {
     "@theorem/no-react-key-prefix": "error",
     "@theorem/no-todos": "error",
 
+    "@typescript-eslint/no-unused-expressions": "error",
     // This modifies eslint no-unused-vars with ts awareness
     "@typescript-eslint/no-unused-vars": "error",
     // Not enough benefit
