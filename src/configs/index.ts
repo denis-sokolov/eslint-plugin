@@ -36,7 +36,6 @@ const minimal = {
     "no-dupe-else-if": "error",
     "no-dupe-keys": "error",
     "no-duplicate-case": "error",
-    "no-else-return": "error",
     "no-empty-character-class": "error",
     "no-import-assign": "error",
     "no-iterator": "error",
