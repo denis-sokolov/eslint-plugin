@@ -6,20 +6,36 @@ Install the tools:
 npm install --save eslint @theorem/eslint-plugin
 ```
 
-Create an `.eslintrc.js` file:
+Create a minimal `.eslintrc.js` file:
 
 ```js
 module.exports = {
-  env: {
-    // Tweak as relevant
-    browser: true,
-    node: true
-  },
-  // For new projects, consider "plugin:@theorem/opinionated".
-  // For existing big projects that have a lot of warnings, consider "plugin:@theorem/minimal".
-  extends: ["plugin:@theorem/recommended"],
   plugins: ["@theorem"]
 };
+```
+
+Choose a ruleset and add it to the config above:
+
+```js
+{
+  // For existing big projects that have a lot of warnings
+  extends: ["plugin:@theorem/minimal"],
+  // For a good compromise
+  extends: ["plugin:@theorem/recommended"],
+  // For new projects
+  extends: ["plugin:@theorem/opinionated"],
+}
+```
+
+Let eslint know whether you run in Browser or in Node and if you have some [test tools that use globals](https://eslint.org/docs/user-guide/configuring#specifying-environments):
+
+```js
+{
+  env: {
+    browser: true,
+    node: true
+  }
+}
 ```
 
 Add a script to your package.json:
@@ -34,7 +50,7 @@ Add a script to your package.json:
 
 Run with `npm run lint` and address the concerns.
 
-If you disagree with a rule or you want to postpone handling it for later, disable in your .eslintrc.js:
+If you want to postpone handling a rule for later, or if you disagree with a rule (let us know!), disable in your .eslintrc.js:
 
 ```js
 module.exports = {
