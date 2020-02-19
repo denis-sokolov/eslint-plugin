@@ -83,6 +83,8 @@ const recommended = {
     "no-shadow": "error",
     "no-template-curly-in-string": "error",
     "no-throw-literal": "error",
+    // Less relevant with TypeScript, has false positives with globals
+    "no-undef": "off",
     "no-var": "error",
     "prefer-promise-reject-errors": "error",
     "prefer-rest-params": "error",
@@ -107,6 +109,7 @@ const opinionated = {
     "react-hooks/exhaustive-deps": "error",
 
     eqeqeq: ["error", "smart"],
+    "no-undef": "error",
     "prefer-const": "error",
     yoda: "error"
   }
