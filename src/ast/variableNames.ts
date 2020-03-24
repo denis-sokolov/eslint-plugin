@@ -19,14 +19,14 @@ export function variableNames(
     return [
       {
         name: expr.name,
-        node: expr
-      }
+        node: expr,
+      },
     ];
   }
 
   if (includeDestructuring && expr.type === AST_NODE_TYPES.ArrayPattern) {
     return flat(
-      expr.elements.map(el => {
+      expr.elements.map((el) => {
         if (!el) return [];
         return variableNames(el, options);
       })
@@ -35,7 +35,7 @@ export function variableNames(
 
   if (includeDestructuring && expr.type === AST_NODE_TYPES.ObjectPattern) {
     return flat(
-      expr.properties.map(p => {
+      expr.properties.map((p) => {
         if (p.type !== AST_NODE_TYPES.Property) return [];
         return variableNames(p.value, options);
       })

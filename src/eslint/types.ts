@@ -1,6 +1,6 @@
 import {
   RuleContext,
-  RuleListener
+  RuleListener,
 } from "@typescript-eslint/experimental-utils/dist/ts-eslint/";
 import { Location, Node } from "../ast";
 

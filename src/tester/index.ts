@@ -8,9 +8,9 @@ class RuleTester extends TSESLint.RuleTester {
       parser: require.resolve("@typescript-eslint/parser"),
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
-        }
-      }
+          jsx: true,
+        },
+      },
     });
   }
 }
@@ -23,24 +23,24 @@ export function invalid(
   code: string,
   options: { count?: number } = {}
 ) {
-  test(name, t => {
+  test(name, (t) => {
     const blankError = {};
     const errors = Array.from(new Array(options.count || 1)).map(
       () => blankError
     );
     ruleTester.run("dummy-name", rule as any, {
       valid: [],
-      invalid: [{ code, errors: errors as any }]
+      invalid: [{ code, errors: errors as any }],
     });
     t.pass();
   });
 }
 
 export function valid(name: string, rule: Rule, code: string) {
-  test(name, t => {
+  test(name, (t) => {
     ruleTester.run("dummy-name", rule as any, {
       valid: [code],
-      invalid: []
+      invalid: [],
     });
     t.pass();
   });

@@ -5,7 +5,7 @@ import rule from "./no-positional-boolean-parameters";
   "() => {}",
   "(options) => {}",
   "(param, options = {}) => {}",
-  "({ disabled }) => {}"
+  "({ disabled }) => {}",
 ].forEach((code, i) =>
   valid(`no positional booleans present in ${i}`, rule, code)
 );
@@ -14,7 +14,7 @@ import rule from "./no-positional-boolean-parameters";
   "(showFoo) => {}",
   "(willFoo) => {}",
   "function foo(canFoo) {}",
-  "(function foo(hasBar) {})"
+  "(function foo(hasBar) {})",
 ].forEach((code, i) =>
   invalid(`positional booleans present in ${i}`, rule, code)
 );

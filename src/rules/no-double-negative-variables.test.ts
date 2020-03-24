@@ -39,7 +39,7 @@ invalid(
   noDoubleNegativeVariables,
   `let [hideBor, noBaz, quux] = 0 as any`,
   {
-    count: 2
+    count: 2,
   }
 );
 

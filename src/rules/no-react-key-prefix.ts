@@ -2,7 +2,7 @@ import { jsxAttributeValue, variablesUsed } from "../ast";
 import { Rule } from "../eslint";
 
 const rule: Rule = {
-  create: function(context) {
+  create: function (context) {
     return {
       JSXOpeningElement(node) {
         const value = jsxAttributeValue(node, "key");
@@ -19,13 +19,13 @@ const rule: Rule = {
           message: [
             "Index in key needs no further detailing.",
             "If you include the positional index in the key, then you’re effectively opting out of optimizations and no amount of detail added helps at all.",
-            "Either find a real key, like an id, or sometimes string content, or just use key={index}."
+            "Either find a real key, like an id, or sometimes string content, or just use key={index}.",
           ].join(" "),
-          node
+          node,
         });
-      }
+      },
     };
-  }
+  },
 };
 
 export default rule;

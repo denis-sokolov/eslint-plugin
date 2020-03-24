@@ -4,7 +4,7 @@ export function jsxAttributeValue(
   node: TSESTree.JSXOpeningElement,
   name: string
 ) {
-  const keyAttribute = node.attributes.find(a => {
+  const keyAttribute = node.attributes.find((a) => {
     if ((a.type as any) === "JSXSpreadAttribute") return false;
     if (!a.name) return false;
     return a.name.name === name;

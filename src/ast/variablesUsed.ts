@@ -4,7 +4,7 @@ type Result = { name: string; node: Node }[];
 
 export function variablesUsed(node: Node): Result {
   return descendantsAndSelf(node)
-    .map(function(n) {
+    .map(function (n) {
       if (n.type !== AST_NODE_TYPES.Identifier) return undefined;
       if (
         n.parent &&
@@ -14,8 +14,8 @@ export function variablesUsed(node: Node): Result {
         return;
       return { name: n.name, node: n };
     })
-    .filter(v => v)
-    .map(function(v) {
+    .filter((v) => v)
+    .map(function (v) {
       if (!v) throw new Error();
       return v;
     });

@@ -3,7 +3,7 @@ import { Rule } from "../eslint";
 import { flat } from "../flat";
 
 const rule: Rule = {
-  create: function(context) {
+  create: function (context) {
     const clean = (name: string): string => {
       if (name.match(/^no[A-Z]/)) return name[2].toLowerCase() + name.substr(3);
       if (name.match(/^hide[A-Z]/)) return "show" + name.substr(4);
@@ -22,9 +22,9 @@ const rule: Rule = {
                 name
               )}” instead and add a negation everywhere it’s used.`,
               `If the number of negations you will add bothers you, consider that it is a random accident and after tomorrow’s changes the code may have more inversions instead.`,
-              `It is more valuable for the name to describe its contents and not how it happens to be used.`
+              `It is more valuable for the name to describe its contents and not how it happens to be used.`,
             ].join(" "),
-            node
+            node,
           });
         });
     };
@@ -32,7 +32,7 @@ const rule: Rule = {
       ArrowFunctionExpression(node) {
         validate(
           flat(
-            node.params.map(n =>
+            node.params.map((n) =>
               variableNames(n, { includeDestructuring: true })
             )
           )
@@ -41,7 +41,7 @@ const rule: Rule = {
       FunctionExpression(node) {
         validate(
           flat(
-            node.params.map(n =>
+            node.params.map((n) =>
               variableNames(n, { includeDestructuring: true })
             )
           )
@@ -50,7 +50,7 @@ const rule: Rule = {
       FunctionDeclaration(node) {
         validate(
           flat(
-            node.params.map(n =>
+            node.params.map((n) =>
               variableNames(n, { includeDestructuring: true })
             )
           )
@@ -59,14 +59,14 @@ const rule: Rule = {
       VariableDeclaration(node) {
         validate(
           flat(
-            node.declarations.map(d =>
+            node.declarations.map((d) =>
               variableNames(d.id, { includeDestructuring: true })
             )
           )
         );
-      }
+      },
     };
-  }
+  },
 };
 
 export default rule;

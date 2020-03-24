@@ -1,14 +1,14 @@
 const minimal = {
   env: {
-    es6: true
+    es6: true,
   },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: "module",
   },
   plugins: ["@typescript-eslint", "react-hooks"],
   rules: {
@@ -19,7 +19,7 @@ const minimal = {
     "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
     "@typescript-eslint/triple-slash-reference": [
       "error",
-      { path: "never", types: "never", lib: "never" }
+      { path: "never", types: "never", lib: "never" },
     ],
 
     "react-hooks/rules-of-hooks": "error",
@@ -49,8 +49,8 @@ const minimal = {
     "no-unsafe-negation": "error",
     "require-atomic-updates": "error",
     "use-isnan": "error",
-    "valid-typeof": "error"
-  }
+    "valid-typeof": "error",
+  },
 };
 
 const recommended = {
@@ -58,7 +58,7 @@ const recommended = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
   ],
   rules: {
     ...minimal.rules,
@@ -87,9 +87,9 @@ const recommended = {
     "no-var": "error",
     "prefer-promise-reject-errors": "error",
     "prefer-rest-params": "error",
-    "prefer-spread": "error"
+    "prefer-spread": "error",
   },
-  settings: { react: { version: "detect" } }
+  settings: { react: { version: "detect" } },
 };
 
 const opinionated = {
@@ -100,7 +100,7 @@ const opinionated = {
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/consistent-type-assertions": [
       "error",
-      { assertionStyle: "as" }
+      { assertionStyle: "as" },
     ],
     "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
@@ -110,12 +110,12 @@ const opinionated = {
     eqeqeq: ["error", "smart"],
     "no-undef": "error",
     "prefer-const": "error",
-    yoda: "error"
-  }
+    yoda: "error",
+  },
 };
 
 export const configs = {
   minimal,
   recommended,
-  opinionated
+  opinionated,
 };

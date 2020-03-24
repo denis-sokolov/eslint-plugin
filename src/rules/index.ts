@@ -12,5 +12,5 @@ export const rules: Rules = {
   "no-non-null-assertion": noNonNullAssertion,
   "no-positional-boolean-parameters": noPositionalBooleanParameters,
   "no-react-key-prefix": noReactKeyPrefix,
-  "no-todos": noTodos
+  "no-todos": noTodos,
 };

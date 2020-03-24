@@ -2,8 +2,8 @@
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production tsc",
     "ci": "npm run verify",
-    "format": "prettier --write 'src/**/*.{json,md,ts}' *.{json,md,ts}",
-    "format-verify": "prettier --check 'src/**/*.{json,md,ts}' *.{json,md,ts}",
+    "format": "prettier --write 'src/**/*.{json,md,ts}'",
+    "format-verify": "prettier --check 'src/**/*.{json,md,ts}'",
     "prepublishOnly": "npm run verify && npm run build",
     "start-building": "rm -rf dist && NODE_ENV=production tsc --watch",
     "test": "ava",
@@ -22,7 +22,7 @@
     "@typescript-eslint/experimental-utils": "^2.17.0",
     "ava": "^3.1.0",
     "eslint": "^6.8.0",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.2",
     "ts-node": "^8.6.2"
   },
   "description": "",

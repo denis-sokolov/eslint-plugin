@@ -11,19 +11,19 @@ export function reword(
       : messageOrFunction;
   const rule: Rule = {
     ...base,
-    create: function(context) {
+    create: function (context) {
       const p: typeof context = Object.create(context, {
-        report: { writable: true }
+        report: { writable: true },
       });
-      p.report = function(params) {
+      p.report = function (params) {
         context.report({
           ...params,
           messageId: undefined,
-          message: f(params as any)
+          message: f(params as any),
         } as any);
       };
       return base.create(p);
-    }
+    },
   };
   return rule;
 }
