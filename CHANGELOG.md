@@ -1,3 +1,7 @@
+# 2.0.2
+
+- Maintenance release
+
 # 2.0.1
 
 - Relax no-undef, no-else-return, no-unused-expressions
