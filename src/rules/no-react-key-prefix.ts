@@ -1,5 +1,5 @@
 import { jsxAttributeValue, variablesUsed } from "../ast";
-import { Rule } from "../eslint";
+import type { Rule } from "../eslint";
 
 const rule: Rule = {
   create: function (context) {

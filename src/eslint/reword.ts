@@ -1,5 +1,5 @@
-import { ReportDescriptor } from "@typescript-eslint/experimental-utils/dist/ts-eslint/";
-import { Rule } from "./types";
+import type { ReportDescriptor } from "@typescript-eslint/experimental-utils/dist/ts-eslint/";
+import type { Rule } from "./types";
 
 export function reword(
   base: Rule,

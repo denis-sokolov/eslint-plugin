@@ -1,8 +1,8 @@
-import {
+import type {
   RuleContext,
   RuleListener,
 } from "@typescript-eslint/experimental-utils/dist/ts-eslint/";
-import { Location, Node } from "../ast";
+import type { Location, Node } from "../ast";
 
 type MessageIds = "";
 

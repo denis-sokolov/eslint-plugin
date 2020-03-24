@@ -1,4 +1,4 @@
-import { Rules } from "../eslint";
+import type { Rules } from "../eslint";
 import noDoubleNegativeVariables from "./no-double-negative-variables";
 import noEnums from "./no-enums";
 import noNonNullAssertion from "./no-non-null-assertion";

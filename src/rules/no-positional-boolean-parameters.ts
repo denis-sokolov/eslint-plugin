@@ -1,5 +1,5 @@
 import { variableNames, Node } from "../ast";
-import { Rule } from "../eslint";
+import type { Rule } from "../eslint";
 import { flat } from "../flat";
 
 const rule: Rule = {
