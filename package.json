@@ -2,8 +2,8 @@
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production tsc",
     "ci": "npm run verify",
-    "format": "prettier --write 'src/**/*.{json,md,ts}'",
-    "format-verify": "prettier --check 'src/**/*.{json,md,ts}'",
+    "format": "prettier --write 'src/**/*.{js,json,md,ts}' '*.{js,json,md,ts}'",
+    "format-verify": "prettier --check 'src/**/*.{json,md,ts}' '*.{js,json,md,ts}'",
     "prepublishOnly": "npm run verify && npm run build",
     "start-building": "rm -rf dist && NODE_ENV=production tsc --watch",
     "test": "ava",
