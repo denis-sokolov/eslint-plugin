@@ -99,6 +99,8 @@ const opinionated = {
   rules: {
     ...recommended.rules,
 
+    "@theorem/no-interfaces": "error",
+
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/consistent-type-assertions": [
       "error",
