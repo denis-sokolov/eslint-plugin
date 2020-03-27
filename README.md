@@ -4,7 +4,8 @@ This tool provides some benefits on top of eslint:
 
 - **Setup**. Eslint out of the box does not support TypeScript or React, this comes with both preconfigured;
 - **Team rules**. This includes code patterns the team finds valuable. [The list](./src/rules);
-- **Configuration**. At three levels of strictness, this allows to choose the correct set of rules prepared for you.
+- **Configuration**. At three levels of strictness, this allows to choose the correct set of rules prepared for you;
+- **Project-specific rules**. Convenient setup to write [custom project-specific rules](docs/custom-rules.md).
 
 [Get started](./docs/setup.md).
 

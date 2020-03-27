@@ -1,3 +1,4 @@
+import { customRules } from "../custom";
 import type { Rules } from "../eslint";
 import noDoubleNegativeVariables from "./no-double-negative-variables";
 import noEnums from "./no-enums";
@@ -13,4 +14,5 @@ export const rules: Rules = {
   "no-positional-boolean-parameters": noPositionalBooleanParameters,
   "no-react-key-prefix": noReactKeyPrefix,
   "no-todos": noTodos,
+  ...customRules(),
 };

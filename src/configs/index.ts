@@ -1,3 +1,5 @@
+import { customConfigs } from "../custom";
+
 const minimal = {
   env: {
     es6: true,
@@ -118,4 +120,5 @@ export const configs = {
   minimal,
   recommended,
   opinionated,
+  ...customConfigs(),
 };
