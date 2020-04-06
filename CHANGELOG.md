@@ -1,3 +1,9 @@
+# 3.0.0
+
+- Support custom project-specific rules;
+- Add no-interfaces
+- Relax no-unused-vars, TypeScript compiler already warns about that
+
 # 2.0.2
 
 - Maintenance release
