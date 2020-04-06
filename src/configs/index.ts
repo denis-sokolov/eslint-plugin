@@ -73,8 +73,11 @@ const recommended = {
     "@theorem/no-todos": "error",
 
     "@typescript-eslint/no-unused-expressions": "error",
-    // This modifies eslint no-unused-vars with ts awareness
-    "@typescript-eslint/no-unused-vars": "error",
+
+    // TypeScript compiler already warns about it, resulting in duplicate warnings in the editor
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-unused-vars": "off",
+
     // Not enough benefit
     "react/no-children-prop": "off",
     // Irrelevant with TypeScript
