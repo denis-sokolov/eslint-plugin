@@ -18,7 +18,7 @@
     "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "@types/node": "^13.9.3",
+    "@types/node": "^14.0.1",
     "@typescript-eslint/experimental-utils": "^2.33.0",
     "ava": "^3.8.2",
     "eslint": "^6.8.0",
