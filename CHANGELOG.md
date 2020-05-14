@@ -1,3 +1,7 @@
+# 4.0.0
+
+- Add no-import-cycle
+
 # 3.0.0
 
 - Support custom project-specific rules;
