@@ -60,8 +60,10 @@ const recommended = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:import/typescript",
     "plugin:react/recommended",
   ],
+  plugins: [...minimal.plugins, "import"],
   rules: {
     ...minimal.rules,
 
@@ -77,6 +79,8 @@ const recommended = {
     // TypeScript compiler already warns about it, resulting in duplicate warnings in the editor
     "@typescript-eslint/no-unused-vars": "off",
     "no-unused-vars": "off",
+
+    "import/no-cycle": "error",
 
     // Not enough benefit
     "react/no-children-prop": "off",
