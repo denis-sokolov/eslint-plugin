@@ -53,6 +53,12 @@ const minimal = {
     "use-isnan": "error",
     "valid-typeof": "error",
   },
+  settings: {
+    react: {
+      // Silence the warning for projects that do not use React
+      version: "latest",
+    },
+  },
 };
 
 const recommended = {
