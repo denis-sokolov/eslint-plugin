@@ -5,6 +5,7 @@ type Result = { name: string; node: Node }[];
 
 export function variableNames(
   expr:
+    | TSESTree.TSEmptyBodyFunctionExpression
     | TSESTree.Expression
     | TSESTree.AssignmentPattern
     | TSESTree.BindingName
