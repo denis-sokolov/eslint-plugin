@@ -1,3 +1,7 @@
+# 5.0.0
+
+- Require eslint 7
+
 # 4.0.0
 
 - Add no-import-cycle
