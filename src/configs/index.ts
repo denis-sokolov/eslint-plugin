@@ -127,7 +127,6 @@ const opinionated = {
     eqeqeq: ["error", "smart"],
     "no-undef": "error",
     "prefer-const": "error",
-    yoda: "error",
   },
 };
 
