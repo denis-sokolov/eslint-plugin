@@ -24,6 +24,8 @@ const minimal = {
       { path: "never", types: "never", lib: "never" },
     ],
 
+    // React 17
+    "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
 
     "no-async-promise-executor": "error",
