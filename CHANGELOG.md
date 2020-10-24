@@ -1,3 +1,7 @@
+# 5.1.0
+
+- Relax yoda and react-in-jsx-scope
+
 # 5.0.0
 
 - Require eslint 7
