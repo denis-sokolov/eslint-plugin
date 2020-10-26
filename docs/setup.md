@@ -38,6 +38,8 @@ Let eslint know whether you run in Browser or in Node and if you have some [test
 }
 ```
 
+If you choose browser-only above, you may need to add `ignorePatterns: ["*.js"]` to the config to not have eslint complain about module.exports use in configuration files.
+
 Add a script to your package.json:
 
 ```json
