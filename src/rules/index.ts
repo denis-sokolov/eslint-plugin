@@ -2,6 +2,8 @@ import { customRules } from "../custom";
 import type { Rules } from "../eslint";
 import noDoubleNegativeVariables from "./no-double-negative-variables";
 import noEnums from "./no-enums";
+import noImportsDown from "./no-imports-down";
+import noImportsUp from "./no-imports-up";
 import noInterfaces from "./no-interfaces";
 import noNonNullAssertion from "./no-non-null-assertion";
 import noPositionalBooleanParameters from "./no-positional-boolean-parameters";
@@ -11,6 +13,8 @@ import noTodos from "./no-todos";
 export const rules: Rules = {
   "no-double-negative-variables": noDoubleNegativeVariables,
   "no-enums": noEnums,
+  "no-imports-down": noImportsDown,
+  "no-imports-up": noImportsUp,
   "no-interfaces": noInterfaces,
   "no-non-null-assertion": noNonNullAssertion,
   "no-positional-boolean-parameters": noPositionalBooleanParameters,

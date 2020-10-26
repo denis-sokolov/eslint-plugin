@@ -114,6 +114,8 @@ const opinionated = {
   rules: {
     ...recommended.rules,
 
+    "@theorem/no-imports-down": "error",
+    "@theorem/no-imports-up": "error",
     "@theorem/no-interfaces": "error",
 
     "@typescript-eslint/adjacent-overload-signatures": "error",
