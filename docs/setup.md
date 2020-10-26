@@ -10,7 +10,7 @@ Create a minimal `.eslintrc.js` file:
 
 ```js
 module.exports = {
-  plugins: ["@theorem"]
+  plugins: ["@theorem"],
 };
 ```
 
@@ -57,8 +57,8 @@ If you want to postpone handling a rule for later, or if you disagree with a rul
 ```js
 module.exports = {
   rules: {
-    "react-hooks/exhaustive-deps": "off"
-  }
+    "react-hooks/exhaustive-deps": "off",
+  },
 };
 ```
 
