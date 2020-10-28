@@ -1,3 +1,8 @@
+# 6.0.0
+
+- no-import-up and no-import-down rules
+- relax react/no-unescaped-entities to allow ' and "
+
 # 5.1.0
 
 - Relax yoda and react-in-jsx-scope
