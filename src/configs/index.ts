@@ -92,6 +92,8 @@ const recommended = {
 
     // Not enough benefit
     "react/no-children-prop": "off",
+    // Warnings on ' and " are too complicated at little benefit
+    "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }],
     // Irrelevant with TypeScript
     "react/prop-types": "off",
 
