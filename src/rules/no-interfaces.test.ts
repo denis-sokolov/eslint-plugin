@@ -7,3 +7,13 @@ invalid(
   noInterfaces,
   "interface Foo { bar: string }"
 );
+valid(
+  "no-interfaces allows interface Window",
+  noInterfaces,
+  "interface Window { bar: string }"
+);
+valid(
+  "no-interfaces allows inside declared modules",
+  noInterfaces,
+  "declare module 'foo' { interface Foo { bar: string } }"
+);
