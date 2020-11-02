@@ -45,7 +45,7 @@ Add a script to your package.json:
 ```json
 {
   "scripts": {
-    "lint": "eslint --ext js,jsx,ts,tsx src"
+    "lint": "eslint src"
   }
 }
 ```
