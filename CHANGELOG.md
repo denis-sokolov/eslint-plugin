@@ -1,3 +1,7 @@
+# 6.1.0
+
+- relax no-interfaces to allow module augmentation
+
 # 6.0.0
 
 - no-import-up and no-import-down rules
