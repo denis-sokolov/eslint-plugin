@@ -10,7 +10,9 @@ export function parseImportValue(node: TSESTree.ImportDeclaration) {
   if (value.match(/^@.+\/.+\//)) return "organization-module";
   if (value.startsWith("@")) return "unknown";
 
-  if (value.startsWith("../")) return "relative-up";
+  if (value.match(/^(\.\.\/)+.+[^.]\//)) return "relative-up-and-deep";
+  if (value.match(/^(\.\.\/)*\.\.\/?$/)) return "relative-up-and-done";
+  if (value.match(/^(\.\.\/)+/)) return "relative-up-and-sideways";
 
   if (value.match(/^\.\/.+\/.+\/.+/)) return "relative-deep";
   if (value.match(/^\.\/.+\/.+/)) return "relative-top";

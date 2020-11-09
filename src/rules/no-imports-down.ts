@@ -5,9 +5,13 @@ function getMessage(type: ReturnType<typeof parseImportValue>) {
   const convention =
     "The convention is every directory represents a module, and everything that is not exposed at the top-level is an internal implementation detail.";
 
-  if (type === "relative-deep" || type === "relative-top")
+  if (
+    type === "relative-deep" ||
+    type === "relative-top" ||
+    type === "relative-up-and-deep"
+  )
     return [
-      "Avoid importing from deeper than the current level.",
+      "Avoid importing from deeper than one level.",
       convention,
       'Consider instead an index file that explicitly exports what should be accessible outside the module (export { Foo } from "./subfolder")',
     ];

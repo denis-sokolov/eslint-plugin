@@ -36,3 +36,9 @@ invalid(
   noImportsDown,
   "import {} from '@org/foo/bar/quux'"
 );
+
+invalid(
+  "no-imports-up can not import up and then down",
+  noImportsDown,
+  "import {} from '../getFoo/bar'"
+);
