@@ -1,3 +1,7 @@
+# 6.2.1
+
+- maintenance release
+
 # 6.2.0
 
 - relax no-imports-up a little
