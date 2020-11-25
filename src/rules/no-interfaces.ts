@@ -16,7 +16,7 @@ const rule: Rule = {
 
         context.report({
           message: [
-            "XXAvoid using interface keyword, use type instead: type Size = { height: number }.",
+            "Avoid using interface keyword, use type instead: type Size = { height: number }.",
             "Interface keyword and type keyword define exactly the same types, this is purely a syntactic distinction.",
             "Where you would use Foo extends Bar { ... }, use Foo = Bar & ...",
             `If you are augmenting a 3rd-party interface, please disable this rule by placing an // eslint-disable-next-line ${context.id}`,
