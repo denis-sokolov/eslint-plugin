@@ -1,7 +1,6 @@
 {
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production tsc",
-    "ci": "npm run verify",
     "format": "prettier --write .",
     "format-verify": "prettier --check .",
     "prepublishOnly": "npm run verify && npm run build",
