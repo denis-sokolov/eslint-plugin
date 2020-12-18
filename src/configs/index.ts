@@ -52,6 +52,7 @@ const minimal = {
     "no-unmodified-loop-condition": "error",
     "no-unreachable": "error",
     "no-unsafe-negation": "error",
+    "no-useless-backreference": "error",
     "require-atomic-updates": "error",
     "use-isnan": "error",
     "valid-typeof": "error",
