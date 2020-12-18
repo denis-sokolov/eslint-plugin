@@ -45,6 +45,7 @@ const minimal = {
     "no-invalid-regexp": "error",
     "no-irregular-whitespace": "error",
     "no-misleading-character-class": "error",
+    "no-nonoctal-decimal-escape": "error",
     "no-self-compare": "error",
     "no-setter-return": "error",
     "no-unexpected-multiline": "error",
