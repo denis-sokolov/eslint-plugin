@@ -77,6 +77,7 @@ const recommended = {
   rules: {
     ...minimal.rules,
 
+    "@theorem/max-lines": [2, 500],
     "@theorem/no-double-negative-variables": "error",
     "@theorem/no-enums": "error",
     "@theorem/no-non-null-assertion": "error",
@@ -118,6 +119,7 @@ const opinionated = {
   rules: {
     ...recommended.rules,
 
+    "@theorem/max-lines": [2, 200],
     "@theorem/no-imports-down": "error",
     "@theorem/no-imports-up": "error",
     "@theorem/no-interfaces": "error",
