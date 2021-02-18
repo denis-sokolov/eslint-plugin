@@ -10,8 +10,8 @@
     "verify": "npm run typecheck && npm run test && npm run format-verify"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.10.0",
-    "@typescript-eslint/parser": "^4.10.0",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
@@ -19,9 +19,9 @@
   },
   "devDependencies": {
     "@types/node": "^14.14.14",
-    "@typescript-eslint/experimental-utils": "^4.10.0",
+    "@typescript-eslint/experimental-utils": "^4.15.1",
     "ava": "^3.14.0",
-    "eslint": "7.15.0",
+    "eslint": "7.20.0",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1"
   },
@@ -33,7 +33,7 @@
   "main": "dist/index.js",
   "name": "@theorem/eslint-plugin",
   "peerDependencies": {
-    "eslint": "^7.15.0"
+    "eslint": "^7.20.0"
   },
   "repository": "git@github.com:Theorem/eslint-plugin.git",
   "sideEffects": false,
