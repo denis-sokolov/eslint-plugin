@@ -1,5 +1,6 @@
 import { customRules } from "../custom";
 import type { Rules } from "../eslint";
+import maxLines from "./max-lines";
 import noDoubleNegativeVariables from "./no-double-negative-variables";
 import noEnums from "./no-enums";
 import noImportsDown from "./no-imports-down";
@@ -11,6 +12,7 @@ import noReactKeyPrefix from "./no-react-key-prefix";
 import noTodos from "./no-todos";
 
 export const rules: Rules = {
+  "max-lines": maxLines,
   "no-double-negative-variables": noDoubleNegativeVariables,
   "no-enums": noEnums,
   "no-imports-down": noImportsDown,
