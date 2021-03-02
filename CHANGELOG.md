@@ -1,3 +1,10 @@
+# 7.0.0
+
+- Added accessibility rules
+- Added max-lines rule
+- Added no-useless-backreference rule
+- Added no-nonoctal-decimal-escape rule
+
 # 6.2.1
 
 - maintenance release
