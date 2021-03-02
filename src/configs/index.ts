@@ -73,7 +73,7 @@ const recommended = {
     "plugin:import/typescript",
     "plugin:react/recommended",
   ],
-  plugins: [...minimal.plugins, "import"],
+  plugins: [...minimal.plugins, "import", "jsx-a11y"],
   rules: {
     ...minimal.rules,
 
@@ -92,6 +92,32 @@ const recommended = {
     "no-unused-vars": "off",
 
     "import/no-cycle": "error",
+
+    "jsx-a11y/alt-text": "error",
+    "jsx-a11y/anchor-has-content": "error",
+    "jsx-a11y/anchor-is-valid": "error",
+    "jsx-a11y/aria-activedescendant-has-tabindex": "error",
+    "jsx-a11y/aria-props": "error",
+    "jsx-a11y/aria-proptypes": "error",
+    "jsx-a11y/aria-role": ["error", { ignoreNonDOM: true }],
+    "jsx-a11y/aria-unsupported-elements": "error",
+    "jsx-a11y/autocomplete-valid": [
+      "error",
+      { inputComponents: ["Input", "FormField"] },
+    ],
+    // Click forwarding to an interactive element is a major false positive
+    // "jsx-a11y/click-events-have-key-events": "error",
+    "jsx-a11y/heading-has-content": "error",
+    "jsx-a11y/iframe-has-title": "error",
+    "jsx-a11y/img-redundant-alt": "error",
+    "jsx-a11y/interactive-supports-focus": "error",
+    "jsx-a11y/label-has-associated-control": "error",
+    "jsx-a11y/lang": "error",
+    "jsx-a11y/mouse-events-have-key-events": "error",
+    "jsx-a11y/no-noninteractive-tabindex": "error",
+    "jsx-a11y/no-redundant-roles": "error",
+    "jsx-a11y/role-has-required-aria-props": "error",
+    "jsx-a11y/role-supports-aria-props": "error",
 
     // Not enough benefit
     "react/no-children-prop": "off",
@@ -131,6 +157,9 @@ const opinionated = {
     ],
     "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
+
+    "jsx-a11y/media-has-caption": "error",
+    "jsx-a11y/tabindex-no-positive": "error",
 
     "react-hooks/exhaustive-deps": "error",
 
