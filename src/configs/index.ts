@@ -143,6 +143,8 @@ const recommended = {
     "prefer-promise-reject-errors": "error",
     "prefer-rest-params": "error",
     "prefer-spread": "error",
+
+    "react-hooks/exhaustive-deps": "error",
   },
   settings: { react: { version: "detect" } },
 };
@@ -167,8 +169,6 @@ const opinionated = {
 
     "jsx-a11y/media-has-caption": "error",
     "jsx-a11y/tabindex-no-positive": "error",
-
-    "react-hooks/exhaustive-deps": "error",
 
     eqeqeq: ["error", "smart"],
     "no-undef": "error",
