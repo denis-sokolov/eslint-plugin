@@ -3,11 +3,12 @@
     "build": "rm -rf dist && NODE_ENV=production tsc",
     "format": "prettier --write .",
     "format-verify": "prettier --check .",
+    "lint": "eslint .",
     "prepublishOnly": "npm run verify && npm run build",
     "start-building": "rm -rf dist && NODE_ENV=production tsc --watch",
     "test": "ava",
     "typecheck": "tsc --noEmit",
-    "verify": "npm run typecheck && npm run test && npm run format-verify"
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run format-verify"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.16.1",
@@ -19,6 +20,7 @@
     "typescript": "^4.2.2"
   },
   "devDependencies": {
+    "@theorem/eslint-plugin": "^7.0.0",
     "@types/node": "^14.14.31",
     "@typescript-eslint/experimental-utils": "^4.16.1",
     "ava": "^3.15.0",
