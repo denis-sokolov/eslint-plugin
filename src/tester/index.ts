@@ -21,7 +21,7 @@ export function invalid(
   name: string,
   rule: Rule,
   code: string,
-  options: { count?: number } = {}
+  options: { count?: number; ruleOptions?: unknown[] } = {}
 ) {
   test(name, (t) => {
     const blankError = {};
@@ -30,16 +30,28 @@ export function invalid(
     );
     ruleTester.run("dummy-name", rule as any, {
       valid: [],
-      invalid: [{ code, errors: errors as any }],
+      invalid: [
+        { code, errors: errors as any, options: options.ruleOptions || [] },
+      ],
     });
     t.pass();
   });
 }
 
-export function valid(name: string, rule: Rule, code: string) {
+export function valid(
+  name: string,
+  rule: Rule,
+  code: string,
+  options: { ruleOptions?: unknown[] } = {}
+) {
   test(name, (t) => {
     ruleTester.run("dummy-name", rule as any, {
-      valid: [code],
+      valid: [
+        {
+          code,
+          options: options.ruleOptions || [],
+        },
+      ],
       invalid: [],
     });
     t.pass();
