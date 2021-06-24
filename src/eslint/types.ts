@@ -12,7 +12,7 @@ type ReportParams = {
   node: Node;
 };
 
-type Context = Omit<RuleContext<MessageIds, void[]>, "report"> & {
+export type Context = Omit<RuleContext<MessageIds, void[]>, "report"> & {
   report: (params: ReportParams) => void;
 };
 
