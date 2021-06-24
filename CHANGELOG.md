@@ -1,3 +1,8 @@
+# 8.0.0
+
+- Move react-hooks/exhaustive-deps to recommended from opinionated
+- Added check-custom-hook-dependencies rule
+
 # 7.0.0
 
 - Added accessibility rules
