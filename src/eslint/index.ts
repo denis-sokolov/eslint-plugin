@@ -1,2 +1,2 @@
-export * from "./reword";
+export * from "./changeRule";
 export * from "./types";
