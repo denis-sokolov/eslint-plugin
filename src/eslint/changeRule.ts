@@ -27,6 +27,15 @@ export function changeReport(
   });
 }
 
+export function filter(
+  base: Rule,
+  f: (params: ReportDescriptor<"">) => boolean
+) {
+  return changeReport(base, function (params) {
+    if (f({ ...params, messageId: "" })) params.report(params);
+  });
+}
+
 export function reword(
   base: Rule,
   messageOrFunction: string | ((params: ReportDescriptor<"">) => string)
