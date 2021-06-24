@@ -145,6 +145,10 @@ const recommended = {
     "prefer-spread": "error",
 
     "react-hooks/exhaustive-deps": "error",
+    "@theorem/check-custom-hook-dependencies": [
+      "error",
+      { additionalHooks: "(useAsyncEffect)" },
+    ],
   },
   settings: { react: { version: "detect" } },
 };

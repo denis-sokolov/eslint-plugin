@@ -1,0 +1,10 @@
+import { rules } from "eslint-plugin-react-hooks";
+import { filter } from "../eslint";
+
+const rule = filter(rules["exhaustive-deps"], (params) => {
+  if (params.message?.match(/\buseEffect\b/)) return false;
+
+  return true;
+});
+
+export default rule;
