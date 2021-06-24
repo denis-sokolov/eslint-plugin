@@ -1,5 +1,6 @@
-import type { ReportDescriptor } from "@typescript-eslint/experimental-utils/dist/ts-eslint/";
 import type { Context, Rule } from "./types";
+
+type Params = Parameters<Context["report"]>[0] & { data?: unknown };
 
 export function changeRule(base: Rule, f: Rule["create"]): Rule {
   return {
@@ -12,9 +13,7 @@ export function changeRule(base: Rule, f: Rule["create"]): Rule {
 
 export function changeReport(
   base: Rule,
-  f: (
-    params: Parameters<Context["report"]>[0] & { report: Context["report"] }
-  ) => void
+  f: (params: Params & { report: Context["report"] }) => void
 ): Rule {
   return changeRule(base, function (context) {
     const p: typeof context = Object.create(context, {
@@ -27,18 +26,15 @@ export function changeReport(
   });
 }
 
-export function filter(
-  base: Rule,
-  f: (params: ReportDescriptor<"">) => boolean
-) {
+export function filter(base: Rule, f: (params: Params) => boolean) {
   return changeReport(base, function (params) {
-    if (f({ ...params, messageId: "" })) params.report(params);
+    if (f({ ...params })) params.report(params);
   });
 }
 
 export function reword(
   base: Rule,
-  messageOrFunction: string | ((params: ReportDescriptor<"">) => string)
+  messageOrFunction: string | ((params: Params) => string)
 ) {
   const f =
     typeof messageOrFunction === "string"

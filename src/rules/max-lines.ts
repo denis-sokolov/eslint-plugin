@@ -2,7 +2,7 @@ import baseRule from "eslint/lib/rules/max-lines";
 import { reword } from "../eslint";
 
 const rule = reword(baseRule, (params) => {
-  const max = String(params.data?.max || "");
+  const max = String((params.data as any)?.max || "");
 
   return [
     "Avoid very long files.",
