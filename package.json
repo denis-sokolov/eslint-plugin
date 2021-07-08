@@ -40,5 +40,5 @@
   },
   "repository": "git@github.com:Theorem/eslint-plugin.git",
   "sideEffects": false,
-  "version": "9.0.0"
+  "version": "9.0.1"
 }
