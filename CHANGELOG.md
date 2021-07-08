@@ -1,3 +1,7 @@
+# 9.0.1
+
+- check-custom-hook-dependencies removes some false positives
+
 # 9.0.0
 
 - check-custom-hook-dependencies trigger on many more rules by default
