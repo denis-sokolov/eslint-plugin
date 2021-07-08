@@ -24,6 +24,6 @@ import rule from "./check-custom-hook-dependencies";
   "function F(){ const a = useState(); useMyEffect(() => { console.log(a); }, []); }",
 ].forEach((code, i) =>
   invalid(`check-custom-hook-dependencies invalid ${i}`, rule, code, {
-    ruleOptions: [{ additionalHooks: "(useMyEffect)" }],
+    ruleOptions: [{ additionalHooks: "^useMyEffect$" }],
   })
 );

@@ -147,7 +147,7 @@ const recommended = {
     "react-hooks/exhaustive-deps": "error",
     "@theorem/check-custom-hook-dependencies": [
       "error",
-      { additionalHooks: "(use.+(Callback|Effect|Memo))" },
+      { additionalHooks: "^use.+(Callback|Effect|Memo)$" },
     ],
   },
   settings: { react: { version: "detect" } },
