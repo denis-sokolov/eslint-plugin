@@ -1,3 +1,7 @@
+# 9.0.0
+
+- check-custom-hook-dependencies trigger on many more rules by default
+
 # 8.0.0
 
 - Move react-hooks/exhaustive-deps to recommended from opinionated
