@@ -34,11 +34,11 @@
   ],
   "license": "ISC",
   "main": "dist/index.js",
-  "name": "@theorem/eslint-plugin",
+  "name": "@denis-sokolov/eslint-plugin",
   "peerDependencies": {
     "eslint": "^7.21.0"
   },
-  "repository": "git@github.com:Theorem/eslint-plugin.git",
+  "repository": "git@github.com:denis-sokolov/eslint-plugin.git",
   "sideEffects": false,
   "version": "9.0.1"
 }

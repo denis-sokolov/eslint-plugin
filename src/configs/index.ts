@@ -77,13 +77,13 @@ const recommended = {
   rules: {
     ...minimal.rules,
 
-    "@theorem/max-lines": [2, 500],
-    "@theorem/no-double-negative-variables": "error",
-    "@theorem/no-enums": "error",
-    "@theorem/no-non-null-assertion": "error",
-    "@theorem/no-positional-boolean-parameters": "error",
-    "@theorem/no-react-key-prefix": "error",
-    "@theorem/no-todos": "error",
+    "@denis-sokolov/max-lines": [2, 500],
+    "@denis-sokolov/no-double-negative-variables": "error",
+    "@denis-sokolov/no-enums": "error",
+    "@denis-sokolov/no-non-null-assertion": "error",
+    "@denis-sokolov/no-positional-boolean-parameters": "error",
+    "@denis-sokolov/no-react-key-prefix": "error",
+    "@denis-sokolov/no-todos": "error",
 
     "@typescript-eslint/no-unused-expressions": "error",
 
@@ -145,7 +145,7 @@ const recommended = {
     "prefer-spread": "error",
 
     "react-hooks/exhaustive-deps": "error",
-    "@theorem/check-custom-hook-dependencies": [
+    "@denis-sokolov/check-custom-hook-dependencies": [
       "error",
       { additionalHooks: "^use.+(Callback|Effect|Memo)$" },
     ],
@@ -158,10 +158,10 @@ const opinionated = {
   rules: {
     ...recommended.rules,
 
-    "@theorem/max-lines": [2, 200],
-    "@theorem/no-imports-down": "error",
-    "@theorem/no-imports-up": "error",
-    "@theorem/no-interfaces": "error",
+    "@denis-sokolov/max-lines": [2, 200],
+    "@denis-sokolov/no-imports-down": "error",
+    "@denis-sokolov/no-imports-up": "error",
+    "@denis-sokolov/no-interfaces": "error",
 
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/consistent-type-assertions": [

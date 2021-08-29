@@ -1,9 +1,9 @@
-# Theorem JavaScript/TypeScript linting tool
+# Custom JavaScript/TypeScript linting tool
 
 This tool provides some benefits on top of eslint:
 
 - **Setup**. Eslint out of the box does not support TypeScript or React, this comes with both preconfigured;
-- **Team rules**. This includes code patterns the team finds valuable. [The list](./src/rules);
+- **Preferred rules**. This includes code patterns we find valuable. [The list](./src/rules);
 - **Configuration**. At three levels of strictness, this allows to choose the correct set of rules prepared for you;
 - **Project-specific rules**. Convenient setup to write [custom project-specific rules](docs/custom-rules.md).
 
@@ -13,7 +13,7 @@ This tool provides some benefits on top of eslint:
 
 ![Theorem](docs/images/theorem.jpg)
 
-This software is lovingly maintained and funded by Theorem.
+This software was lovingly funded by Theorem.
 From whiteboarding new concepts to long-term support, Theorem works with startups and large multi-national enterprises to develop new applications, software, services, and platforms to achieve the best results and deliver Full Stack Innovation™
 
 At Theorem we believe in and support open-source software.

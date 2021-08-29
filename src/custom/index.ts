@@ -34,7 +34,7 @@ function loadCode(path: string) {
 
 export function custom(dirname: string) {
   const existing = groups.find((g) => g.dirname === dirname);
-  if (existing) return `plugin:@theorem/${groupName(existing)}`;
+  if (existing) return `plugin:@denis-sokolov/${groupName(existing)}`;
 
   const groupId = groups.length;
 
@@ -53,7 +53,7 @@ export function custom(dirname: string) {
   };
   groups.push(group);
 
-  return `plugin:@theorem/${groupName(group)}`;
+  return `plugin:@denis-sokolov/${groupName(group)}`;
 }
 
 export function customConfigs() {
@@ -63,7 +63,7 @@ export function customConfigs() {
   groups.forEach((group) => {
     const rules: { [name: string]: "error" } = {};
     group.rules.forEach((rule) => {
-      rules[`@theorem/${ruleName(rule)}`] = "error";
+      rules[`@denis-sokolov/${ruleName(rule)}`] = "error";
     });
     configs[groupName(group)] = { rules };
   });

@@ -3,14 +3,14 @@
 Install the tools:
 
 ```
-npm install --save eslint @theorem/eslint-plugin
+npm install --save eslint @denis-sokolov/eslint-plugin
 ```
 
 Create a minimal `.eslintrc.js` file:
 
 ```js
 module.exports = {
-  plugins: ["@theorem"],
+  plugins: ["@denis-sokolov"],
 };
 ```
 
@@ -19,11 +19,11 @@ Choose a ruleset and add it to the config above:
 ```js
 {
   // For existing big projects that have a lot of warnings
-  extends: ["plugin:@theorem/minimal"],
+  extends: ["plugin:@denis-sokolov/minimal"],
   // For a good compromise
-  extends: ["plugin:@theorem/recommended"],
+  extends: ["plugin:@denis-sokolov/recommended"],
   // For new projects
-  extends: ["plugin:@theorem/opinionated"],
+  extends: ["plugin:@denis-sokolov/opinionated"],
 }
 ```
 

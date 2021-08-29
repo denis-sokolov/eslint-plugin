@@ -9,14 +9,14 @@ Create linting rules that are customized to your project. Example use cases:
 With this plugin in place, the setup to write a custom rule is really simple. In your `.eslintrc.js`:
 
 ```js
-const { custom } = require("@theorem/eslint-plugin/dist/custom");
+const { custom } = require("@denis-sokolov/eslint-plugin/dist/custom");
 
 module.exports = {
   extends: [
     // ...
     custom(__dirname + "/src/my-lint-rules"),
   ],
-  plugins: ["@theorem"],
+  plugins: ["@denis-sokolov"],
 };
 ```
 
