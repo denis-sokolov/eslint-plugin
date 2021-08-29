@@ -15,7 +15,9 @@ import rule from "./check-custom-hook-dependencies";
   // Do not trigger on async callback
   "function F(){ useMyEffect(async () => {}, []); }",
 ].forEach((code, i) =>
-  valid(`check-custom-hook-dependencies valid ${i}`, rule, code)
+  valid(`check-custom-hook-dependencies valid ${i}`, rule, code, {
+    ruleOptions: [{ additionalHooks: "^useMyEffect$" }],
+  })
 );
 
 [
