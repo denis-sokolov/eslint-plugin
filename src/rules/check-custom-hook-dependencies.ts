@@ -1,3 +1,9 @@
+/**
+ * The goal of this rule is to filter the regular exhaustive-deps
+ * to only provide warnings about exhaustive-deps, and not about
+ * effect parameter being async.
+ */
+
 import { rules } from "eslint-plugin-react-hooks";
 import { filter } from "../eslint";
 
