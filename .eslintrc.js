@@ -2,11 +2,11 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ["plugin:@theorem/opinionated"],
-  plugins: ["@theorem"],
+  extends: ["plugin:@denis-sokolov/opinionated"],
+  plugins: ["@denis-sokolov"],
   rules: {
     // Importing a lot of implementation details from eslint package
-    "@theorem/no-imports-down": "off",
+    "@denis-sokolov/no-imports-down": "off",
 
     // Our tests include string samples of code
     "no-template-curly-in-string": "off",
