@@ -175,7 +175,6 @@ const opinionated = {
     "jsx-a11y/tabindex-no-positive": "error",
 
     eqeqeq: ["error", "smart"],
-    "no-undef": "error",
     "prefer-const": "error",
   },
 };
