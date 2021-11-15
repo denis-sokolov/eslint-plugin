@@ -1,13 +1,17 @@
 module.exports = {
   env: {
+    es6: true,
     node: true,
   },
-  extends: ["plugin:@denis-sokolov/opinionated"],
-  plugins: ["@denis-sokolov"],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: "module",
+  },
   rules: {
-    // Importing a lot of implementation details from eslint package
-    "@denis-sokolov/no-imports-down": "off",
-
     // Our tests include string samples of code
     "no-template-curly-in-string": "off",
   },
