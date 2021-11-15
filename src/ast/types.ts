@@ -6,6 +6,6 @@ export {
   TSESTree,
 } from "@typescript-eslint/typescript-estree";
 
-export type Location = TSESTree.SourceLocation | TSESTree.LineAndColumnData;
+export type Location = TSESTree.SourceLocation;
 
 export type Node = TSESTree.Node | TSESTree.Comment | TSESTree.Token;
