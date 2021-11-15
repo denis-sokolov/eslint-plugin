@@ -1,6 +1,9 @@
-declare module "eslint/lib/rules/max-lines" {
+declare module "eslint/use-at-your-own-risk" {
   const Rule: any;
-  export default Rule;
+  type BuiltinRules = {
+    get: (name: string) => Rule;
+  };
+  export const builtinRules: BuiltinRules;
 }
 
 declare module "eslint-plugin-react-hooks" {

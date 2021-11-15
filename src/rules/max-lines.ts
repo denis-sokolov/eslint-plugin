@@ -1,6 +1,7 @@
-import baseRule from "eslint/lib/rules/max-lines";
+import { builtinRules } from "eslint/use-at-your-own-risk";
 import { reword } from "../eslint";
 
+const baseRule = builtinRules.get("max-lines");
 const rule = reword(baseRule, (params) => {
   const max = String((params.data as any)?.max || "");
 
