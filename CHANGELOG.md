@@ -1,3 +1,7 @@
+# 10.0.0
+
+- Require eslint 8
+
 # 9.0.1
 
 - check-custom-hook-dependencies removes some false positives
