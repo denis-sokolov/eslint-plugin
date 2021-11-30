@@ -1,5 +1,14 @@
 import type { TSESTree } from "../ast";
 
+export function importPath(node: TSESTree.ImportDeclaration) {
+  const { value } = node.source;
+  if (typeof value !== "string")
+    throw new Error(
+      `Import value is expected to be a string, not ${typeof value}`
+    );
+  return value;
+}
+
 export function parseImportValue(node: TSESTree.ImportDeclaration) {
   const { value } = node.source;
 
