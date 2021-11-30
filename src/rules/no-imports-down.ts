@@ -1,5 +1,5 @@
 import type { Rule } from "../eslint";
-import { importPath, parseImportValue } from "./imports";
+import { ImportPathDeclaration, importPath, parseImportValue } from "./imports";
 
 function getMessage(type: ReturnType<typeof parseImportValue>) {
   const convention =
@@ -34,18 +34,23 @@ const rule: Rule = {
     const ignoreRegexes = (options.ignoreRegexes || []).map(
       (source) => new RegExp(source)
     );
-    return {
-      ImportDeclaration(node) {
-        if (ignoreRegexes.some((regex) => regex.test(importPath(node)))) return;
 
-        const importType = parseImportValue(node);
-        const message = getMessage(importType);
-        if (message)
-          context.report({
-            message: message.join(" "),
-            node,
-          });
-      },
+    function process(node: ImportPathDeclaration) {
+      if (ignoreRegexes.some((regex) => regex.test(importPath(node)))) return;
+
+      const importType = parseImportValue(node);
+      const message = getMessage(importType);
+      if (message)
+        context.report({
+          message: message.join(" "),
+          node,
+        });
+    }
+
+    return {
+      ImportDeclaration: process,
+      ExportAllDeclaration: process,
+      ExportNamedDeclaration: process,
     };
   },
 };

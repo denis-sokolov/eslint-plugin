@@ -56,3 +56,21 @@ invalid(
   "import {} from './foo/bar'",
   { ruleOptions: [{ ignoreRegexes: ["^xxx"] }] }
 );
+
+invalid(
+  "no-imports-down applies to named export from",
+  noImportsDown,
+  "export {} from './foo/bar'"
+);
+
+invalid(
+  "no-imports-down applies to star export from",
+  noImportsDown,
+  "export * from './foo/bar'"
+);
+
+valid(
+  "no-imports-down does not apply to exports without a path",
+  noImportsDown,
+  "export {}"
+);
