@@ -1,5 +1,5 @@
 import type { Rule } from "../eslint";
-import { parseImportValue } from "./parseImportValue";
+import { parseImportValue } from "./imports";
 
 function getMessage(type: ReturnType<typeof parseImportValue>) {
   const convention =

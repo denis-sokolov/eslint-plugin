@@ -1,5 +1,5 @@
 import type { Rule } from "../eslint";
-import { parseImportValue } from "./parseImportValue";
+import { parseImportValue } from "./imports";
 
 const valuesToDetect: Array<ReturnType<typeof parseImportValue>> = [
   "relative-up-and-done",
