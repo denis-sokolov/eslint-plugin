@@ -1,16 +1,18 @@
 import type { TSESTree } from "../ast";
 
-export function importPath(node: TSESTree.ImportDeclaration) {
-  const { value } = node.source;
-  if (typeof value !== "string")
-    throw new Error(
-      `Import value is expected to be a string, not ${typeof value}`
-    );
+export type ImportPathDeclaration =
+  | TSESTree.ImportDeclaration
+  | TSESTree.ExportAllDeclaration
+  | TSESTree.ExportNamedDeclaration;
+
+export function importPath(node: ImportPathDeclaration) {
+  const { value } = node.source || {};
+  if (typeof value !== "string") return "";
   return value;
 }
 
-export function parseImportValue(node: TSESTree.ImportDeclaration) {
-  const { value } = node.source;
+export function parseImportValue(node: ImportPathDeclaration) {
+  const { value } = node.source || {};
 
   if (typeof value !== "string") return "unknown";
 
