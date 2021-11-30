@@ -42,3 +42,17 @@ invalid(
   noImportsDown,
   "import {} from '../getFoo/bar'"
 );
+
+valid(
+  "no-imports-down respects ignoreRegexes",
+  noImportsDown,
+  "import {} from './foo/bar'",
+  { ruleOptions: [{ ignoreRegexes: ["^"] }] }
+);
+
+invalid(
+  "no-imports-down does not apply ignoreRegexes too broadly",
+  noImportsDown,
+  "import {} from './foo/bar'",
+  { ruleOptions: [{ ignoreRegexes: ["^xxx"] }] }
+);

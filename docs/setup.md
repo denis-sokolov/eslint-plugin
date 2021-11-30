@@ -63,3 +63,19 @@ module.exports = {
 ```
 
 Finally, once linting shows no errors, add it to your CI run to ensure the expected level going forward.
+
+## Rule options
+
+```js
+module.exports = {
+  rules: {
+    "no-imports-down": [
+      "error",
+      {
+        // Whitelist some paths as allowed
+        ignoreRegexes: ["^lib/icons"],
+      },
+    ],
+  },
+};
+```
