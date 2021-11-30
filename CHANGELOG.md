@@ -1,3 +1,8 @@
+# 11.0.0
+
+- no-imports-down also triggers on export from statements
+- no-imports-down has a ignoreRegexes option
+
 # 10.0.0
 
 - Require eslint 8
