@@ -12,7 +12,7 @@ const minimal = {
     ecmaVersion: 2018,
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "react-hooks"],
+  plugins: ["@typescript-eslint", "promise", "react-hooks"],
   rules: {
     "@typescript-eslint/no-extra-non-null-assertion": "error",
     "@typescript-eslint/no-empty-interface": "error",
@@ -23,6 +23,8 @@ const minimal = {
       "error",
       { path: "never", types: "never", lib: "never" },
     ],
+
+    "promise/no-new-statics": "error",
 
     // React 17
     "react/react-in-jsx-scope": "off",
@@ -125,6 +127,8 @@ const recommended = {
     "jsx-a11y/no-redundant-roles": "error",
     "jsx-a11y/role-has-required-aria-props": "error",
     "jsx-a11y/role-supports-aria-props": "error",
+
+    "promise/catch-or-return": "error",
 
     // Not enough benefit
     "react/no-children-prop": "off",
