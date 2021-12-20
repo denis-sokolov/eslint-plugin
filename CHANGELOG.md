@@ -1,3 +1,7 @@
+# 12.0.0
+
+- Adds promise plugin rules
+
 # 11.0.0
 
 - no-imports-down also triggers on export from statements
