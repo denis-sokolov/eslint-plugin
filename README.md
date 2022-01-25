@@ -9,18 +9,18 @@ This tool provides some benefits on top of eslint:
 
 [Get started](./docs/setup.md).
 
-## About Theorem
+## About TheoremOne
 
-![Theorem](docs/images/theorem.jpg)
+![TheoremOne](docs/images/TheoremOne.png)
 
-This software was lovingly funded by Theorem.
-From whiteboarding new concepts to long-term support, Theorem works with startups and large multi-national enterprises to develop new applications, software, services, and platforms to achieve the best results and deliver Full Stack Innovation™
+This software was lovingly funded by TheoremOne.
+From whiteboarding new concepts to long-term support, TheoremOne works with startups and large multi-national enterprises to develop new applications, software, services, and platforms to achieve the best results and deliver Full Stack Innovation™
 
-At Theorem we believe in and support open-source software.
+At TheoremOne we believe in and support open-source software.
 
-- Check out more of our open-source software at Theorem.
-- Learn more about [our work](https://theorem.co/portfolio).
-- [Hire us](https://theorem.co/contact) to work on your project.
-- [Want to join the team?](https://theorem.co/careers)
+- Check out more of our open-source software at TheoremOne.
+- Learn more about [our work](https://theoremone.co/portfolio).
+- [Hire us](https://theoremone.co/contact) to work on your project.
+- [Want to join the team?](https://theoremone.co/careers)
 
-_Theorem and the Theorem logo are trademarks or registered trademarks of Theorem, LLC._
+_TheoremOne and the TheoremOne logo are trademarks or registered trademarks of TheoremOne, LLC._
