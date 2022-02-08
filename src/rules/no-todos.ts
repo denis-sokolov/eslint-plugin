@@ -1,7 +1,7 @@
 import type { Rule } from "../eslint";
 
 function commentHasTodos(text: string) {
-  return Boolean(text.match(/\bTODO\b/));
+  return Boolean(text.match(/\b(BUG|FIXME|TODO|XXX)\b/));
 }
 
 const rule: Rule = {
