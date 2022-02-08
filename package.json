@@ -41,5 +41,5 @@
   },
   "repository": "git@github.com:denis-sokolov/eslint-plugin.git",
   "sideEffects": false,
-  "version": "12.0.0"
+  "version": "13.0.0"
 }
