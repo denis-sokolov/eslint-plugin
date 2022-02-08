@@ -1,3 +1,7 @@
+# 13.0.0
+
+- no-todos triggers on BUG, FIXME and XXX in addition to TODO
+
 # 12.0.0
 
 - Adds promise plugin rules
