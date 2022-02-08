@@ -1,5 +1,9 @@
 import type { Rule } from "../eslint";
 
+function commentHasTodos(text: string) {
+  return text.includes("TODO");
+}
+
 const rule: Rule = {
   create: function (context) {
     const sourceCode = context.getSourceCode();
@@ -7,9 +11,7 @@ const rule: Rule = {
       Program() {
         const comments = sourceCode.getAllComments();
         comments.forEach((node) => {
-          const text = node.value;
-
-          if (!text.includes("TODO")) return;
+          if (!commentHasTodos(node.value)) return;
 
           context.report({
             message: [
