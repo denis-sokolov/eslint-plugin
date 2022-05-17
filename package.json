@@ -39,6 +39,7 @@
   "peerDependencies": {
     "eslint": "^8.0.0"
   },
+  "prettier": {},
   "repository": "git@github.com:denis-sokolov/eslint-plugin.git",
   "sideEffects": false,
   "version": "13.0.0"
