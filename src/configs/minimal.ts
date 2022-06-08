@@ -13,8 +13,11 @@ export const minimal = {
   plugins: ["@typescript-eslint", "promise", "react-hooks"],
   rules: {
     "@denis-sokolov/no-old-globals": [
-      "closed",
+      // Rule level
       "error",
+
+      // Names
+      "closed",
       "event",
       "name",
       "length",
