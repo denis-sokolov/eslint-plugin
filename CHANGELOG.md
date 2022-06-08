@@ -1,3 +1,7 @@
+# 14.0.0
+
+- no-old-globals
+
 # 13.0.0
 
 - no-todos triggers on BUG, FIXME and XXX in addition to TODO
