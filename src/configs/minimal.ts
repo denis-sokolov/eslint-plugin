@@ -12,6 +12,16 @@ export const minimal = {
   },
   plugins: ["@typescript-eslint", "promise", "react-hooks"],
   rules: {
+    "@denis-sokolov/no-old-globals": [
+      "closed",
+      "error",
+      "event",
+      "name",
+      "length",
+      "parent",
+      "top",
+    ],
+
     "@typescript-eslint/no-extra-non-null-assertion": "error",
     "@typescript-eslint/no-empty-interface": "error",
     "@typescript-eslint/no-misused-new": "error",

@@ -8,6 +8,7 @@ import noImportsDown from "./no-imports-down";
 import noImportsUp from "./no-imports-up";
 import noInterfaces from "./no-interfaces";
 import noNonNullAssertion from "./no-non-null-assertion";
+import noOldGlobals from "./no-old-globals";
 import noPositionalBooleanParameters from "./no-positional-boolean-parameters";
 import noReactKeyPrefix from "./no-react-key-prefix";
 import noTodos from "./no-todos";
@@ -21,6 +22,7 @@ export const rules: Rules = {
   "no-imports-up": noImportsUp,
   "no-interfaces": noInterfaces,
   "no-non-null-assertion": noNonNullAssertion,
+  "no-old-globals": noOldGlobals,
   "no-positional-boolean-parameters": noPositionalBooleanParameters,
   "no-react-key-prefix": noReactKeyPrefix,
   "no-todos": noTodos,
