@@ -1,6 +1,6 @@
 import test from "ava";
 import type { Rule } from "../eslint";
-import { TSESLint } from "@typescript-eslint/experimental-utils";
+import { TSESLint } from "@typescript-eslint/utils";
 
 class RuleTester extends TSESLint.RuleTester {
   constructor() {
