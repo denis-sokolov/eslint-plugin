@@ -22,6 +22,9 @@ export const opinionated = {
     "jsx-a11y/tabindex-no-positive": "error",
 
     eqeqeq: ["error", "smart"],
+
+    "max-params": ["error", 3],
+
     "prefer-const": "error",
   },
 };
