@@ -1,3 +1,7 @@
+# 15.0.0
+
+- Adds max-params to opinionated
+
 # 14.0.0
 
 - no-old-globals
