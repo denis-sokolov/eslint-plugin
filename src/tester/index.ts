@@ -17,6 +17,9 @@ class RuleTester extends TSESLint.RuleTester {
 
 const ruleTester = new RuleTester();
 
+// invalid and valid are more like a DSL than functions
+/* eslint-disable max-params */
+
 export function invalid(
   name: string,
   rule: Rule,
