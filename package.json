@@ -23,11 +23,11 @@
   },
   "devDependencies": {
     "@denis-sokolov/eslint-plugin": "^15.0.0",
-    "@types/node": "^17.0.41",
+    "@types/node": "^18.11.17",
     "ava": "^4.3.0",
     "eslint": "^8.30.0",
     "prettier": "^2.8.1",
-    "ts-node": "^10.8.1"
+    "ts-node": "^10.9.1"
   },
   "description": "",
   "files": [
