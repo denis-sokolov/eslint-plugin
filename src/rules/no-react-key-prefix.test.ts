@@ -8,6 +8,11 @@ valid(
   noReactKeyPrefix,
   "<div key={foo.index} />"
 );
+valid(
+  "allows react key with properties on an i variable",
+  noReactKeyPrefix,
+  "<div key={i.id} />"
+);
 invalid(
   "don’t prefix react key concat",
   noReactKeyPrefix,

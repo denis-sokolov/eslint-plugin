@@ -11,6 +11,12 @@ const rule: Rule = {
 
         const vars = variablesUsed(value);
         const includesIndex = vars.some((v) => {
+          if (
+            "parent" in v.node &&
+            v.node.parent?.type === "MemberExpression"
+          ) {
+            return false;
+          }
           return ["i", "index", "n"].includes(v.name);
         });
         if (!includesIndex) return;
