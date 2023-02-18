@@ -10,9 +10,9 @@ const rule: Rule = {
         if (value.type === "Identifier") return;
 
         const vars = variablesUsed(value);
-        const includesIndex = vars.some(({ name }) =>
-          ["i", "index", "n"].includes(name)
-        );
+        const includesIndex = vars.some((v) => {
+          return ["i", "index", "n"].includes(v.name);
+        });
         if (!includesIndex) return;
 
         context.report({
