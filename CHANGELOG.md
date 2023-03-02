@@ -1,3 +1,7 @@
+# 15.0.1
+
+- no-react-key-prefix: allow reading properties on i
+
 # 15.0.0
 
 - Adds max-params to opinionated
