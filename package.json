@@ -42,5 +42,5 @@
   "prettier": {},
   "repository": "git@github.com:denis-sokolov/eslint-plugin.git",
   "sideEffects": false,
-  "version": "15.0.0"
+  "version": "15.0.1"
 }
