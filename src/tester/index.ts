@@ -31,7 +31,7 @@ export function invalid(
     const errors = Array.from(new Array(options.count || 1)).map(
       () => blankError
     );
-    ruleTester.run("dummy-name", rule as any, {
+    ruleTester.run(name, rule as any, {
       valid: [],
       invalid: [
         { code, errors: errors as any, options: options.ruleOptions || [] },
