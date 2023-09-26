@@ -17,7 +17,7 @@ import rule from "./check-custom-hook-dependencies";
 ].forEach((code, i) =>
   valid(`check-custom-hook-dependencies valid ${i}`, rule, code, {
     ruleOptions: [{ additionalHooks: "^useMyEffect$" }],
-  })
+  }),
 );
 
 [
@@ -27,5 +27,5 @@ import rule from "./check-custom-hook-dependencies";
 ].forEach((code, i) =>
   invalid(`check-custom-hook-dependencies invalid ${i}`, rule, code, {
     ruleOptions: [{ additionalHooks: "^useMyEffect$" }],
-  })
+  }),
 );

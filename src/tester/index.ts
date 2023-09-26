@@ -24,12 +24,12 @@ export function invalid(
   name: string,
   rule: Rule,
   code: string,
-  options: { count?: number; ruleOptions?: unknown[] } = {}
+  options: { count?: number; ruleOptions?: unknown[] } = {},
 ) {
   test(name, (t) => {
     const blankError = {};
     const errors = Array.from(new Array(options.count || 1)).map(
-      () => blankError
+      () => blankError,
     );
     ruleTester.run(name, rule as any, {
       valid: [],
@@ -45,7 +45,7 @@ export function valid(
   name: string,
   rule: Rule,
   code: string,
-  options: { ruleOptions?: unknown[] } = {}
+  options: { ruleOptions?: unknown[] } = {},
 ) {
   test(name, (t) => {
     ruleTester.run("dummy-name", rule as any, {

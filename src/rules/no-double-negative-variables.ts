@@ -19,7 +19,7 @@ const rule: Rule = {
               `Avoid negative names, this does not lead to not being confused about the resulting double negatives.`,
               `For instance, imagine a conditional \`if (!${name})\`.`,
               `Instead of “${name}”, consider “${clean(
-                name
+                name,
               )}” instead and add a negation everywhere it’s used.`,
               `If the number of negations you will add bothers you, consider that it is a random accident and after tomorrow’s changes the code may have more inversions instead.`,
               `It is more valuable for the name to describe its contents and not how it happens to be used.`,
@@ -33,36 +33,36 @@ const rule: Rule = {
         validate(
           flat(
             node.params.map((n) =>
-              variableNames(n, { includeDestructuring: true })
-            )
-          )
+              variableNames(n, { includeDestructuring: true }),
+            ),
+          ),
         );
       },
       FunctionExpression(node) {
         validate(
           flat(
             node.params.map((n) =>
-              variableNames(n, { includeDestructuring: true })
-            )
-          )
+              variableNames(n, { includeDestructuring: true }),
+            ),
+          ),
         );
       },
       FunctionDeclaration(node) {
         validate(
           flat(
             node.params.map((n) =>
-              variableNames(n, { includeDestructuring: true })
-            )
-          )
+              variableNames(n, { includeDestructuring: true }),
+            ),
+          ),
         );
       },
       VariableDeclaration(node) {
         validate(
           flat(
             node.declarations.map((d) =>
-              variableNames(d.id, { includeDestructuring: true })
-            )
-          )
+              variableNames(d.id, { includeDestructuring: true }),
+            ),
+          ),
         );
       },
     };

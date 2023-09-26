@@ -12,7 +12,7 @@ export function variableNames(
     | TSESTree.Parameter,
   options: {
     includeDestructuring?: boolean;
-  } = {}
+  } = {},
 ): Result {
   const { includeDestructuring } = options;
 
@@ -30,7 +30,7 @@ export function variableNames(
       expr.elements.map((el) => {
         if (!el) return [];
         return variableNames(el, options);
-      })
+      }),
     );
   }
 
@@ -39,7 +39,7 @@ export function variableNames(
       expr.properties.map((p) => {
         if (p.type !== AST_NODE_TYPES.Property) return [];
         return variableNames(p.value, options);
-      })
+      }),
     );
   }
 

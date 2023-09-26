@@ -32,7 +32,7 @@ const rule: Rule = {
     const options: { ignoreRegexes?: string[] } =
       (context.options as any)[0] || {};
     const ignoreRegexes = (options.ignoreRegexes || []).map(
-      (source) => new RegExp(source)
+      (source) => new RegExp(source),
     );
 
     function process(node: ImportPathDeclaration) {

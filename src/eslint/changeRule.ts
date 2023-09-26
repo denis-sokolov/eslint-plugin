@@ -13,7 +13,7 @@ export function changeRule(base: Rule, f: Rule["create"]): Rule {
 
 export function changeReport(
   base: Rule,
-  f: (params: Params & { report: Context["report"] }) => void
+  f: (params: Params & { report: Context["report"] }) => void,
 ): Rule {
   return changeRule(base, function (context) {
     const p: typeof context = Object.create(context, {
@@ -34,7 +34,7 @@ export function filter(base: Rule, f: (params: Params) => boolean) {
 
 export function reword(
   base: Rule,
-  messageOrFunction: string | ((params: Params) => string)
+  messageOrFunction: string | ((params: Params) => string),
 ) {
   const f =
     typeof messageOrFunction === "string"

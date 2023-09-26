@@ -11,13 +11,13 @@ valid(
   howFoo,
   sowQ,
   ideX;
-  `
+  `,
 );
 
 invalid(
   "simple double negative",
   noDoubleNegativeVariables,
-  "const noSuddenStuff = false;"
+  "const noSuddenStuff = false;",
 );
 
 invalid(
@@ -31,7 +31,7 @@ invalid(
   showQ,
   hideX;
   `,
-  { count: 3 }
+  { count: 3 },
 );
 
 invalid(
@@ -40,13 +40,13 @@ invalid(
   `let [hideBor, noBaz, quux] = 0 as any`,
   {
     count: 2,
-  }
+  },
 );
 
 invalid(
   "deep destructuring double negative",
   noDoubleNegativeVariables,
-  `let { foo: [{ bar: hideQQQ }] } = 0 as any;`
+  `let { foo: [{ bar: hideQQQ }] } = 0 as any;`,
 );
 
 invalid(
@@ -55,7 +55,7 @@ invalid(
   `function foo1(noBar: boolean, hideQuux: boolean) {
     console.log(noBar, hideQuux);
   }`,
-  { count: 2 }
+  { count: 2 },
 );
 invalid(
   "function expression param double negative",
@@ -63,7 +63,7 @@ invalid(
   `const foo2 = function foo2(noBar: boolean, hideQuux: boolean) {
     console.log(noBar, hideQuux);
   };`,
-  { count: 2 }
+  { count: 2 },
 );
 
 invalid(
@@ -72,5 +72,5 @@ invalid(
   `const foo3 = (noBar: boolean, noQuux: boolean) => {
   console.log(noBar, noQuux);
   };`,
-  { count: 2 }
+  { count: 2 },
 );

@@ -16,13 +16,13 @@ export function descendantsAndSelf(node: Node | null): Node[] {
   if (node.type === AST_NODE_TYPES.BinaryExpression)
     return andSelf(
       descendantsAndSelf(node.left),
-      descendantsAndSelf(node.right)
+      descendantsAndSelf(node.right),
     );
 
   if (node.type === AST_NODE_TYPES.CallExpression) {
     return andSelf(
       descendantsAndSelf(node.callee),
-      flat(node.arguments.map(descendantsAndSelf))
+      flat(node.arguments.map(descendantsAndSelf)),
     );
   }
 
@@ -30,7 +30,7 @@ export function descendantsAndSelf(node: Node | null): Node[] {
     return andSelf(
       descendantsAndSelf(node.test),
       descendantsAndSelf(node.consequent),
-      descendantsAndSelf(node.alternate)
+      descendantsAndSelf(node.alternate),
     );
 
   if (node.type === AST_NODE_TYPES.Literal) return andSelf();
@@ -38,7 +38,7 @@ export function descendantsAndSelf(node: Node | null): Node[] {
   if (node.type === AST_NODE_TYPES.MemberExpression)
     return andSelf(
       descendantsAndSelf(node.object),
-      descendantsAndSelf(node.property)
+      descendantsAndSelf(node.property),
     );
 
   if (node.type === AST_NODE_TYPES.TemplateLiteral)

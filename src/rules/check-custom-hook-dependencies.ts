@@ -12,7 +12,7 @@ const rule = filter(rules["exhaustive-deps"], (params) => {
 
   if (
     params.message?.match(
-      /\buse(Callback|Effect|ImperativeHandle|LayoutEffect|Memo)\b/
+      /\buse(Callback|Effect|ImperativeHandle|LayoutEffect|Memo)\b/,
     )
   )
     return false;

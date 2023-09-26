@@ -2,7 +2,7 @@ import { AST_NODE_TYPES, TSESTree } from "./types";
 
 export function jsxAttributeValue(
   node: TSESTree.JSXOpeningElement,
-  name: string
+  name: string,
 ) {
   const keyAttribute = node.attributes.find((a) => {
     if (a.type === "JSXSpreadAttribute") return false;

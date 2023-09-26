@@ -6,5 +6,5 @@ invalid("todos are forbidden", noTodos, "// TODO correctly improve the thing");
 invalid(
   "todos are forbidden multiline",
   noTodos,
-  "/* TODO correctly improve the thing */"
+  "/* TODO correctly improve the thing */",
 );

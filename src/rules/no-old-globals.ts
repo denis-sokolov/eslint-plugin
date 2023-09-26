@@ -7,7 +7,7 @@ const rule = reword(
   [
     "This is an old global variable that probably does not do what you want.",
     "Look for typos in your code, perhaps a missing const somewhere.",
-  ].join(" ")
+  ].join(" "),
 );
 
 export default rule;

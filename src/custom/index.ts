@@ -20,13 +20,13 @@ function loadCode(path: string) {
     code = require(path);
   } catch (err) {
     console.error(
-      `Could not load a custom rule. It needs to use pure Node.js JavaScript syntax, no traspilation.\n`
+      `Could not load a custom rule. It needs to use pure Node.js JavaScript syntax, no traspilation.\n`,
     );
     throw err;
   }
   if (typeof code !== "object" || !code.create) {
     throw new Error(
-      `File ${path} does not seem to be a valid eslint rule. Make sure it contains a module.exports = { create: context => {} }`
+      `File ${path} does not seem to be a valid eslint rule. Make sure it contains a module.exports = { create: context => {} }`,
     );
   }
   return code;
@@ -76,7 +76,7 @@ export function customRules() {
     group.rules.forEach((rule) => {
       const ruleCode = loadCode(rule.path);
       rules[ruleName(rule)] = ruleCode;
-    })
+    }),
   );
   return rules;
 }

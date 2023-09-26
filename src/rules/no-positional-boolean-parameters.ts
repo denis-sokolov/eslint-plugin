@@ -7,7 +7,7 @@ const rule: Rule = {
     const isBoolean = (name: string): boolean => {
       return Boolean(
         name.match(/^enabled|disabled|hidden$/) ||
-          name.match(/^(can|has|hide|is|no|show|will)[A-Z]/)
+          name.match(/^(can|has|hide|is|no|show|will)[A-Z]/),
       );
     };
     const validate = (names: { name: string; node: Node }[]) => {
