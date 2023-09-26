@@ -1,7 +1,9 @@
 import { AST_NODE_TYPES, Node } from "./types";
 import { flat } from "../flat";
 
-export function descendantsAndSelf(node: Node): Node[] {
+export function descendantsAndSelf(node: Node | null): Node[] {
+  if (!node) return [];
+
   const andSelf = (...lists: Node[][]) => {
     const res = flat(lists);
     res.push(node);
