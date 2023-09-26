@@ -11,22 +11,22 @@
     "verify": "npm run typecheck && npm run lint && npm run test && npm run format-verify"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.47.0",
-    "@typescript-eslint/parser": "^5.47.0",
-    "@typescript-eslint/utils": "^5.47.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/utils": "^5.62.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   },
   "devDependencies": {
-    "@denis-sokolov/eslint-plugin": "^15.0.0",
-    "@types/node": "^18.11.17",
-    "ava": "^5.1.0",
-    "eslint": "^8.30.0",
-    "prettier": "^2.8.1",
+    "@denis-sokolov/eslint-plugin": "^15.0.1",
+    "@types/node": "^18.18.0",
+    "ava": "^5.3.1",
+    "eslint": "^8.50.0",
+    "prettier": "^2.8.8",
     "tsx": "^3.13.0"
   },
   "description": "",
