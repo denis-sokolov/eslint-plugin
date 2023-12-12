@@ -1,10 +1,9 @@
-import type {
-  RuleContext,
-  RuleListener,
-} from "@typescript-eslint/utils/dist/ts-eslint";
 import type { Location, Node } from "../ast";
+import type { ESLintUtils } from "@typescript-eslint/utils";
 
-type MessageIds = "";
+type Create = ESLintUtils.RuleModule<"">["create"];
+type RuleContext = Parameters<Create>[0];
+type RuleListener = ReturnType<Create>;
 
 type ReportParams = {
   loc?: Location;
@@ -12,7 +11,7 @@ type ReportParams = {
   node: Node;
 };
 
-export type Context = Omit<RuleContext<MessageIds, void[]>, "report"> & {
+export type Context = Omit<RuleContext, "report"> & {
   report: (params: ReportParams) => void;
 };
 

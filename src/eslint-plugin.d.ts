@@ -11,7 +11,7 @@ declare module "eslint-plugin-react-hooks" {
   export { rules };
 }
 
-declare module "@typescript-eslint/eslint-plugin/dist/rules/no-non-null-assertion" {
-  const Rule: any;
-  export default Rule;
+declare module "@typescript-eslint/eslint-plugin/use-at-your-own-risk/rules" {
+  const rules: Record<string, any>;
+  export default rules;
 }

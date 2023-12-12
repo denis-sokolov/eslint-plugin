@@ -32,7 +32,7 @@ const rule: Rule = {
       ArrowFunctionExpression(node) {
         validate(
           flat(
-            node.params.map((n) =>
+            node.params.map((n: any) =>
               variableNames(n, { includeDestructuring: true }),
             ),
           ),
@@ -41,7 +41,7 @@ const rule: Rule = {
       FunctionDeclaration(node) {
         validate(
           flat(
-            node.params.map((n) =>
+            node.params.map((n: any) =>
               variableNames(n, { includeDestructuring: true }),
             ),
           ),
@@ -50,7 +50,7 @@ const rule: Rule = {
       FunctionExpression(node) {
         validate(
           flat(
-            node.params.map((n) =>
+            node.params.map((n: any) =>
               variableNames(n, { includeDestructuring: true }),
             ),
           ),
@@ -59,7 +59,7 @@ const rule: Rule = {
       VariableDeclaration(node) {
         validate(
           flat(
-            node.declarations.map((d) =>
+            node.declarations.map((d: any) =>
               variableNames(d.id, { includeDestructuring: true }),
             ),
           ),
