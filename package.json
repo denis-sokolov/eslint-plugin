@@ -30,6 +30,9 @@
     "tsx": "^4.6.2"
   },
   "description": "",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "files": [
     "dist/**/*"
   ],
