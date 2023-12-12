@@ -23,6 +23,9 @@ export const recommended = {
 
     "@typescript-eslint/no-unused-expressions": "error",
 
+    // Requires more specific project configuration (“parserServices to be generated”)
+    "@typescript-eslint/prefer-optional-chain": "off",
+
     // TypeScript compiler already warns about it, resulting in duplicate warnings in the editor
     "@typescript-eslint/no-unused-vars": "off",
     "no-unused-vars": "off",
