@@ -1,4 +1,3 @@
-import { customRules } from "../custom";
 import type { Rules } from "../eslint";
 import checkCustomHookDependencies from "./check-custom-hook-dependencies";
 import maxLines from "./max-lines";
@@ -26,5 +25,4 @@ export const rules: Rules = {
   "no-positional-boolean-parameters": noPositionalBooleanParameters,
   "no-react-key-prefix": noReactKeyPrefix,
   "no-todos": noTodos,
-  ...customRules(),
 };
