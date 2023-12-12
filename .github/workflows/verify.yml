@@ -12,7 +12,5 @@ jobs:
         with:
           node-version: latest
           cache: npm
-      - name: npm install
-        run: npm ci
-      - name: verify
-        run: npm run verify
+      - run: npm ci
+      - run: npm run verify
