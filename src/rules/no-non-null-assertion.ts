@@ -1,8 +1,8 @@
-import baseRule from "@typescript-eslint/eslint-plugin/dist/rules/no-non-null-assertion";
+import rules from "@typescript-eslint/eslint-plugin/use-at-your-own-risk/rules";
 import { reword } from "../eslint";
 
 const rule = reword(
-  baseRule,
+  rules["no-non-null-assertion"],
   [
     "Avoid the exclamation mark operator.",
     "It implies you know that the value is non-null, but this belief is opaque to teammates, and possibly incorrect.",
