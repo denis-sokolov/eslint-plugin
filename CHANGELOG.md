@@ -1,3 +1,7 @@
+# 15.1.0
+
+- exhaustive-deps-async instead of check-custom-hook-dependencies
+
 # 15.0.1
 
 - no-react-key-prefix: allow reading properties on i
