@@ -82,7 +82,7 @@ export const recommended = {
     "prefer-spread": "error",
 
     "react-hooks/exhaustive-deps": "error",
-    "@denis-sokolov/check-custom-hook-dependencies": [
+    "@denis-sokolov/exhaustive-deps-async": [
       "error",
       { additionalHooks: "^use.+(Callback|Effect|Memo)$" },
     ],

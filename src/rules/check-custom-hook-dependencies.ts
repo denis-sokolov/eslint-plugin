@@ -7,6 +7,9 @@
 import { rules } from "eslint-plugin-react-hooks";
 import { filter } from "../eslint";
 
+/**
+ * @deprecated Use exhaustive-deps-async instead
+ */
 const rule = filter(rules["exhaustive-deps"], (params) => {
   if (params.message?.includes("synchronous")) return false;
 
