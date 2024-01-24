@@ -1,5 +1,6 @@
 import type { Rules } from "../eslint";
 import checkCustomHookDependencies from "./check-custom-hook-dependencies";
+import exhaustiveDepsAsync from "./exhaustive-deps-async";
 import maxLines from "./max-lines";
 import noDoubleNegativeVariables from "./no-double-negative-variables";
 import noEnums from "./no-enums";
@@ -14,6 +15,7 @@ import noTodos from "./no-todos";
 
 export const rules: Rules = {
   "check-custom-hook-dependencies": checkCustomHookDependencies,
+  "exhaustive-deps-async": exhaustiveDepsAsync,
   "max-lines": maxLines,
   "no-double-negative-variables": noDoubleNegativeVariables,
   "no-enums": noEnums,
