@@ -22,12 +22,12 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@denis-sokolov/eslint-plugin": "^15.0.1",
+    "@denis-sokolov/eslint-plugin": "^15.1.0",
     "@types/node": "^18.19.3",
-    "ava": "^6.0.1",
-    "eslint": "^8.55.0",
-    "prettier": "^3.1.1",
-    "tsx": "^4.6.2"
+    "ava": "^6.1.2",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.1"
   },
   "description": "",
   "engines": {
