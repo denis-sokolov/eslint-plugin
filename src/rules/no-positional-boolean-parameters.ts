@@ -14,6 +14,15 @@ const rule: Rule = {
     const validate = (parameters: Parameter[]) => {
       for (const param of parameters) {
         if (param.type === "Identifier") {
+          if (param.typeAnnotation) {
+            if (
+              param.typeAnnotation.typeAnnotation.type === "TSBooleanKeyword"
+            ) {
+              context.report({ message, node: param });
+            }
+            return;
+          }
+
           const name = param.name;
           if (isBoolean(name)) {
             context.report({ message, node: param });
