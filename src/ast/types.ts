@@ -9,3 +9,5 @@ export {
 export type Location = TSESTree.SourceLocation;
 
 export type Node = TSESTree.Node | TSESTree.Comment | TSESTree.Token;
+
+export type Parameter = TSESTree.Parameter;
