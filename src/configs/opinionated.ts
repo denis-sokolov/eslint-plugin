@@ -2,6 +2,11 @@ import { recommended } from "./recommended";
 
 export const opinionated = {
   ...recommended,
+  extends: [
+    ...recommended.extends,
+    "plugin:perfectionist/recommended-natural-legacy",
+  ],
+  plugins: [...recommended.plugins, "perfectionist"],
   rules: {
     ...recommended.rules,
 
@@ -30,6 +35,29 @@ export const opinionated = {
     eqeqeq: ["error", "smart"],
 
     "max-params": ["error", 3],
+
+    "perfectionist/sort-imports": [
+      "error",
+      {
+        groups: [
+          ["builtin", "builtin-type", "external", "external-type"],
+          ["internal", "internal-type"],
+          ["parent", "parent-type"],
+          ["index", "index-type", "sibling", "sibling-type"],
+          "object",
+          "unknown",
+          ["side-effect", "side-effect-style"],
+        ],
+      },
+    ],
+
+    // https://github.com/azat-io/eslint-plugin-perfectionist/issues/222
+    // "perfectionist/sort-objects": ["error", { partitionByNewLine: true }]
+    "perfectionist/sort-objects": "off",
+    "perfectionist/sort-object-types": "off",
+
+    "perfectionist/sort-intersection-types": "off",
+    "perfectionist/sort-union-types": "off",
 
     "prefer-const": "error",
   },
