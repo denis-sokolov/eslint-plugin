@@ -11,6 +11,7 @@ import noNonNullAssertion from "./no-non-null-assertion";
 import noOldGlobals from "./no-old-globals";
 import noPositionalBooleanParameters from "./no-positional-boolean-parameters";
 import noReactKeyPrefix from "./no-react-key-prefix";
+import noSingleLetterGenericTypes from "./no-single-letter-generic-types";
 import noTodos from "./no-todos";
 
 export const rules: Rules = {
@@ -26,5 +27,6 @@ export const rules: Rules = {
   "no-old-globals": noOldGlobals,
   "no-positional-boolean-parameters": noPositionalBooleanParameters,
   "no-react-key-prefix": noReactKeyPrefix,
+  "no-single-letter-generic-types": noSingleLetterGenericTypes,
   "no-todos": noTodos,
 };
