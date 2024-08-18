@@ -18,6 +18,7 @@ export const recommended = {
     "@denis-sokolov/no-non-null-assertion": "error",
     "@denis-sokolov/no-positional-boolean-parameters": "error",
     "@denis-sokolov/no-react-key-prefix": "error",
+    "@denis-sokolov/no-single-letter-generic-types": "error",
     "@denis-sokolov/no-todos": "error",
 
     "@typescript-eslint/no-unused-expressions": "error",
