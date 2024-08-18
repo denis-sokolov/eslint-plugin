@@ -15,6 +15,10 @@ export const opinionated = {
       "error",
       { assertionStyle: "as" },
     ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { fixStyle: "inline-type-imports" },
+    ],
     "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
 
