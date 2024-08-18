@@ -22,6 +22,8 @@ export const opinionated = {
     "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
 
+    "import/consistent-type-specifier-style": ["error", "prefer-inline"],
+
     "jsx-a11y/media-has-caption": "error",
     "jsx-a11y/tabindex-no-positive": "error",
 
