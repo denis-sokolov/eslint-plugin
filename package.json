@@ -43,7 +43,10 @@
     "eslint": "^8.0.0"
   },
   "prettier": {},
-  "repository": "git@github.com:denis-sokolov/eslint-plugin.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denis-sokolov/eslint-plugin.git"
+  },
   "sideEffects": false,
   "version": "15.1.1"
 }
