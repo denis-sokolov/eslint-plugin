@@ -6,7 +6,7 @@ export const opinionated = {
     ...recommended.extends,
     "plugin:perfectionist/recommended-natural-legacy",
   ],
-  plugins: [...recommended.plugins, "perfectionist"],
+  plugins: [...recommended.plugins, "perfectionist", "sort-keys-plus"],
   rules: {
     ...recommended.rules,
 
@@ -53,6 +53,7 @@ export const opinionated = {
 
     // https://github.com/azat-io/eslint-plugin-perfectionist/issues/222
     // "perfectionist/sort-objects": ["error", { partitionByNewLine: true }]
+    "perfectionist/sort-interfaces": "off",
     "perfectionist/sort-objects": "off",
     "perfectionist/sort-object-types": "off",
 
@@ -60,5 +61,11 @@ export const opinionated = {
     "perfectionist/sort-union-types": "off",
 
     "prefer-const": "error",
+
+    "sort-keys-plus/sort-keys": [
+      "error",
+      "asc",
+      { allowLineSeparatedGroups: true, natural: true },
+    ],
   },
 };
