@@ -1,4 +1,5 @@
 import { type Rules } from "../eslint";
+
 import exhaustiveDepsAsync from "./exhaustive-deps-async";
 import maxLines from "./max-lines";
 import noDoubleNegativeVariables from "./no-double-negative-variables";

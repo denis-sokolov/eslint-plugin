@@ -58,8 +58,8 @@ export const opinionated = {
     // https://github.com/azat-io/eslint-plugin-perfectionist/issues/222
     // "perfectionist/sort-objects": ["error", { partitionByNewLine: true }]
     "perfectionist/sort-interfaces": "off",
-    "perfectionist/sort-objects": "off",
     "perfectionist/sort-object-types": "off",
+    "perfectionist/sort-objects": "off",
 
     "perfectionist/sort-intersection-types": "off",
     "perfectionist/sort-union-types": "off",

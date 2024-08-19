@@ -1,5 +1,6 @@
-import type { Location, Node } from "../ast";
-import type { ESLintUtils } from "@typescript-eslint/utils";
+import { type ESLintUtils } from "@typescript-eslint/utils";
+
+import { type Location, type Node } from "../ast";
 
 type Create = ESLintUtils.RuleModule<"">["create"];
 type Meta = ESLintUtils.RuleModule<"">["meta"];
