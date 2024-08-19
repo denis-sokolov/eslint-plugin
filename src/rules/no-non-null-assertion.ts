@@ -1,4 +1,5 @@
 import rules from "@typescript-eslint/eslint-plugin/use-at-your-own-risk/rules";
+
 import { reword } from "../eslint";
 
 const rule = reword(
