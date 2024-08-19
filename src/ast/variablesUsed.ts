@@ -1,5 +1,5 @@
-import { AST_NODE_TYPES, Node } from "./types";
 import { descendantsAndSelf } from "./descend";
+import { AST_NODE_TYPES, type Node } from "./types";
 type Result = { name: string; node: Node }[];
 
 export function variablesUsed(node: Node): Result {

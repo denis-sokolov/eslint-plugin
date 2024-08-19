@@ -1,4 +1,4 @@
-import { AST_NODE_TYPES, TSESTree } from "./types";
+import { AST_NODE_TYPES, type TSESTree } from "./types";
 
 export function jsxAttributeValue(
   node: TSESTree.JSXOpeningElement,

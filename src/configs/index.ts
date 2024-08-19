@@ -1,9 +1,9 @@
 import { minimal } from "./minimal";
-import { recommended } from "./recommended";
 import { opinionated } from "./opinionated";
+import { recommended } from "./recommended";
 
 export const configs = {
   minimal,
-  recommended,
   opinionated,
+  recommended,
 };

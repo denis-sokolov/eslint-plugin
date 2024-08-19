@@ -1,5 +1,10 @@
-import type { Rule } from "../eslint";
-import { ImportPathDeclaration, importPath, parseImportValue } from "./imports";
+import { type Rule } from "../eslint";
+
+import {
+  importPath,
+  type ImportPathDeclaration,
+  parseImportValue,
+} from "./imports";
 
 function getMessage(type: ReturnType<typeof parseImportValue>) {
   const convention =
@@ -48,9 +53,9 @@ const rule: Rule = {
     }
 
     return {
-      ImportDeclaration: process,
       ExportAllDeclaration: process,
       ExportNamedDeclaration: process,
+      ImportDeclaration: process,
     };
   },
 };

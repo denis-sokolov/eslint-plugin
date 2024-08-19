@@ -1,4 +1,4 @@
-import type { TSESTree } from "@typescript-eslint/utils";
+import { type TSESTree } from "@typescript-eslint/utils";
 
 export {
   AST_NODE_TYPES,

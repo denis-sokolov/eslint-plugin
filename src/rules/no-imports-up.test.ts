@@ -1,4 +1,5 @@
 import { invalid, valid } from "../tester";
+
 import noImportsUp from "./no-imports-up";
 
 valid(

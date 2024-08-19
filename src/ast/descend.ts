@@ -1,5 +1,6 @@
-import { AST_NODE_TYPES, Node } from "./types";
 import { flat } from "../flat";
+
+import { AST_NODE_TYPES, type Node } from "./types";
 
 export function descendantsAndSelf(node: Node | null): Node[] {
   if (!node) return [];

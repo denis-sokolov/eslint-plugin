@@ -1,4 +1,4 @@
-import type { Rule } from "../eslint";
+import { type Rule } from "../eslint";
 
 function commentHasTodos(text: string) {
   return Boolean(

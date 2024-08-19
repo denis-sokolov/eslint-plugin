@@ -1,4 +1,5 @@
 import { invalid, valid } from "../tester";
+
 import noReactKeyPrefix from "./no-react-key-prefix";
 
 valid("allows react key i", noReactKeyPrefix, "<div key={i} />");
