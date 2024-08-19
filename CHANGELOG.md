@@ -1,3 +1,10 @@
+# 16.0.0
+
+- no-todos triggers on more cases
+- check-custom-hook-dependencies removed in favour of exhaustive-deps-async
+- Add many styling rules to opinionated
+- Upgrade typescript-eslint to 7
+
 # 15.1.0
 
 - exhaustive-deps-async instead of check-custom-hook-dependencies
