@@ -1,4 +1,5 @@
-import type { Rule } from "../eslint";
+import { type Rule } from "../eslint";
+
 import { parseImportValue } from "./imports";
 
 const valuesToDetect: Array<ReturnType<typeof parseImportValue>> = [

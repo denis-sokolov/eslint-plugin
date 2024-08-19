@@ -1,4 +1,4 @@
-import type { Context, Rule } from "./types";
+import { type Context, type Rule } from "./types";
 
 type Params = Parameters<Context["report"]>[0] & { data?: unknown };
 
@@ -43,8 +43,8 @@ export function reword(
   return changeReport(base, function (params) {
     params.report({
       ...params,
-      messageId: undefined,
       message: f(params as any),
+      messageId: undefined,
     } as any);
   });
 }

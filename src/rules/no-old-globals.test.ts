@@ -1,4 +1,5 @@
 import { invalid, valid } from "../tester";
+
 import rule from "./no-old-globals";
 
 ["const name = 'john';", "console.log(error)"].forEach((code, i) =>

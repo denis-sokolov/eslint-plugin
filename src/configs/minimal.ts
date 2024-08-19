@@ -25,14 +25,14 @@ export const minimal = {
       "top",
     ],
 
-    "@typescript-eslint/no-extra-non-null-assertion": "error",
     "@typescript-eslint/no-empty-interface": "error",
+    "@typescript-eslint/no-extra-non-null-assertion": "error",
     "@typescript-eslint/no-misused-new": "error",
     "@typescript-eslint/no-namespace": "error",
     "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
     "@typescript-eslint/triple-slash-reference": [
       "error",
-      { path: "never", types: "never", lib: "never" },
+      { lib: "never", path: "never", types: "never" },
     ],
 
     "promise/no-new-statics": "error",
@@ -54,9 +54,9 @@ export const minimal = {
     "no-duplicate-case": "error",
     "no-empty-character-class": "error",
     "no-import-assign": "error",
-    "no-iterator": "error",
     "no-invalid-regexp": "error",
     "no-irregular-whitespace": "error",
+    "no-iterator": "error",
     "no-misleading-character-class": "error",
     "no-nonoctal-decimal-escape": "error",
     "no-self-compare": "error",

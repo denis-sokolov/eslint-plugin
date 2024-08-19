@@ -1,4 +1,5 @@
 import { invalid, valid } from "../tester";
+
 import rule from "./exhaustive-deps-async";
 
 [

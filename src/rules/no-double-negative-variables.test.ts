@@ -1,4 +1,5 @@
 import { invalid, valid } from "../tester";
+
 import noDoubleNegativeVariables from "./no-double-negative-variables";
 
 valid(

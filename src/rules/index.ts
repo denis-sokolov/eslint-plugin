@@ -1,4 +1,4 @@
-import type { Rules } from "../eslint";
+import { type Rules } from "../eslint";
 import checkCustomHookDependencies from "./check-custom-hook-dependencies";
 import exhaustiveDepsAsync from "./exhaustive-deps-async";
 import maxLines from "./max-lines";

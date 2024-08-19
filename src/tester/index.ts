@@ -1,6 +1,7 @@
-import test from "ava";
-import type { Rule } from "../eslint";
 import { TSESLint } from "@typescript-eslint/utils";
+import test from "ava";
+
+import { type Rule } from "../eslint";
 
 class RuleTester extends TSESLint.RuleTester {
   constructor() {
@@ -32,10 +33,10 @@ export function invalid(
       () => blankError,
     );
     ruleTester.run(name, rule as any, {
-      valid: [],
       invalid: [
         { code, errors: errors as any, options: options.ruleOptions || [] },
       ],
+      valid: [],
     });
     t.pass();
   });
@@ -49,13 +50,13 @@ export function valid(
 ) {
   test(name, (t) => {
     ruleTester.run("dummy-name", rule as any, {
+      invalid: [],
       valid: [
         {
           code,
           options: options.ruleOptions || [],
         },
       ],
-      invalid: [],
     });
     t.pass();
   });

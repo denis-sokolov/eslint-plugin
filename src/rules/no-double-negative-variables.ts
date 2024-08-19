@@ -1,5 +1,5 @@
-import { variableNames, Node } from "../ast";
-import type { Rule } from "../eslint";
+import { type Node, variableNames } from "../ast";
+import { type Rule } from "../eslint";
 import { flat } from "../flat";
 
 const rule: Rule = {
@@ -38,7 +38,7 @@ const rule: Rule = {
           ),
         );
       },
-      FunctionExpression(node) {
+      FunctionDeclaration(node) {
         validate(
           flat(
             node.params.map((n) =>
@@ -47,7 +47,7 @@ const rule: Rule = {
           ),
         );
       },
-      FunctionDeclaration(node) {
+      FunctionExpression(node) {
         validate(
           flat(
             node.params.map((n) =>

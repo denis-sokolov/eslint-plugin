@@ -1,5 +1,5 @@
-import { Parameter } from "../ast";
-import type { Rule } from "../eslint";
+import { type Parameter } from "../ast";
+import { type Rule } from "../eslint";
 
 const message = `Avoid boolean positional parameters: use named parameters or even separate functions. Instead of onEdit(true), use onEdit({ isNew: true }), or, even better, onEdit() and onNew().`;
 
@@ -34,10 +34,10 @@ const rule: Rule = {
       ArrowFunctionExpression(node) {
         validate(node.params);
       },
-      FunctionExpression(node) {
+      FunctionDeclaration(node) {
         validate(node.params);
       },
-      FunctionDeclaration(node) {
+      FunctionExpression(node) {
         validate(node.params);
       },
     };

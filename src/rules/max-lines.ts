@@ -1,4 +1,5 @@
 import { builtinRules } from "eslint/use-at-your-own-risk";
+
 import { reword } from "../eslint";
 
 const baseRule = builtinRules.get("max-lines");

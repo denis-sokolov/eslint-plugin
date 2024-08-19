@@ -1,4 +1,4 @@
-import type { TSESTree } from "../ast";
+import { type TSESTree } from "../ast";
 
 export type ImportPathDeclaration =
   | TSESTree.ImportDeclaration

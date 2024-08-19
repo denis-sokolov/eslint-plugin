@@ -1,5 +1,6 @@
-import { AST_NODE_TYPES, Node, TSESTree } from "./types";
 import { flat } from "../flat";
+
+import { AST_NODE_TYPES, type Node, type TSESTree } from "./types";
 
 type Result = { name: string; node: Node }[];
 

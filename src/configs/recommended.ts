@@ -49,9 +49,9 @@ export const recommended = {
     "jsx-a11y/label-has-associated-control": [
       "error",
       {
-        labelComponents: ["CustomLabel"],
         controlComponents: ["Input", "Textarea"],
         depth: 5,
+        labelComponents: ["CustomLabel"],
       },
     ],
     "jsx-a11y/lang": "error",
@@ -81,11 +81,11 @@ export const recommended = {
     "prefer-rest-params": "error",
     "prefer-spread": "error",
 
-    "react-hooks/exhaustive-deps": "error",
     "@denis-sokolov/exhaustive-deps-async": [
       "error",
       { additionalHooks: "^use.+(Callback|Effect|Memo)$" },
     ],
+    "react-hooks/exhaustive-deps": "error",
   },
   settings: { react: { version: "detect" } },
 };

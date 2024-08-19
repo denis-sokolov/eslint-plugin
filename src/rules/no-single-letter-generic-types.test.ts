@@ -1,4 +1,5 @@
 import { invalid, valid } from "../tester";
+
 import noSingleLetterGenericTypes from "./no-single-letter-generic-types";
 
 invalid("type definition", noSingleLetterGenericTypes, "type Foo<T> = {}");
