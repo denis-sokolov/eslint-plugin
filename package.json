@@ -50,5 +50,6 @@
     "url": "git+https://github.com/denis-sokolov/eslint-plugin.git"
   },
   "sideEffects": false,
+  "type": "commonjs",
   "version": "15.1.1"
 }
