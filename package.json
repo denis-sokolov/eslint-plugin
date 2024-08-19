@@ -20,7 +20,8 @@
     "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-sort-keys-plus": "^1.4.0"
+    "eslint-plugin-sort-keys-plus": "^1.4.0",
+    "eslint-plugin-typescript-sort-keys": "^3.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.19.44",
