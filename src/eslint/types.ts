@@ -16,7 +16,10 @@ export type Context = Omit<RuleContext, "report"> & {
   report: (params: ReportParams) => void;
 };
 
-export type Rule = { create: (context: Context) => RuleListener };
+export type Rule = {
+  create: (context: Context) => RuleListener;
+  meta?: Partial<ESLintUtils.RuleModule<"">["meta"]>;
+};
 
 export type Rules = {
   [name: string]: Rule;
