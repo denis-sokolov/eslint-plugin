@@ -58,7 +58,7 @@ export function invalid(
       errNum += 1;
     }
 
-    ruleTester.run(name, rule as any, {
+    ruleTester.run("dummy rule name for test " + name, rule as any, {
       invalid: [
         { code, errors: errors as any, options: options.ruleOptions || [] },
       ],
@@ -75,7 +75,7 @@ export function valid(
   options: { ruleOptions?: unknown[] } = {},
 ) {
   test(name, (t) => {
-    ruleTester.run("dummy-name", rule as any, {
+    ruleTester.run("dummy rule name for test " + name, rule as any, {
       invalid: [],
       valid: [
         {
