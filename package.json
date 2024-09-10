@@ -3,7 +3,7 @@
     "build": "rm -rf dist && NODE_ENV=production tsc",
     "format": "prettier --write .",
     "format-verify": "prettier --check .",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "prepublishOnly": "npm run verify && npm run build && publint",
     "start-building": "rm -rf dist && NODE_ENV=production tsc --watch",
     "test": "ava",
