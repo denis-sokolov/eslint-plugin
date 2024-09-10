@@ -59,6 +59,20 @@ const rule: Rule = {
       ImportDeclaration: process,
     };
   },
+  meta: {
+    schema: [
+      {
+        additionalProperties: false,
+        properties: {
+          ignoreRegexes: {
+            items: { type: "string" },
+            type: "array",
+          },
+        },
+        type: "object",
+      },
+    ],
+  },
 };
 
 export default rule;
