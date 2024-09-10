@@ -14,6 +14,12 @@ invalid(
   "import {} from './getFoo/bar'",
 );
 
+invalid(
+  "no-imports-down errors only on the path",
+  noImportsDown,
+  "import {} from <err>'./getFoo/bar'</err>",
+);
+
 valid(
   "no-imports-down can import from packages at one level",
   noImportsDown,

@@ -47,6 +47,7 @@ const rule: Rule = {
       const message = getMessage(importType);
       if (message)
         context.report({
+          loc: node.source?.loc,
           message: message.join(" "),
           node,
         });

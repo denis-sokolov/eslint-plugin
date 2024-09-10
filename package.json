@@ -1,9 +1,9 @@
 {
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production tsc",
-    "format": "prettier --write .",
-    "format-verify": "prettier --check .",
-    "lint": "eslint .",
+    "format": "prettier --write . --log-level=warn",
+    "format-verify": "prettier --check . --log-level=warn",
+    "lint": "eslint . --fix",
     "prepublishOnly": "npm run verify && npm run build && publint",
     "start-building": "rm -rf dist && NODE_ENV=production tsc --watch",
     "test": "ava",
