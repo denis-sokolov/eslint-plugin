@@ -38,7 +38,7 @@ invalid(
 invalid(
   "array destructuring double negatives",
   noDoubleNegativeVariables,
-  `let [hideBor, noBaz, quux] = 0 as any`,
+  `let [<err>hideBor</err>, <err>noBaz</err>, quux] = 0 as any`,
   {
     count: 2,
   },
@@ -47,7 +47,7 @@ invalid(
 invalid(
   "deep destructuring double negative",
   noDoubleNegativeVariables,
-  `let { foo: [{ bar: hideQQQ }] } = 0 as any;`,
+  `let { foo: [{ bar: <err>hideQQQ</err> }] } = 0 as any;`,
 );
 
 invalid(
