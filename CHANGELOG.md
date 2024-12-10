@@ -1,3 +1,7 @@
+# 17.0.0
+
+- Automatic formatting changed logic.
+
 # 16.0.0
 
 - no-todos triggers on more cases
