@@ -2,15 +2,6 @@ import { type Context, type Rule } from "./types";
 
 type Params = Parameters<Context["report"]>[0] & { data?: unknown };
 
-export function changeRule(base: Rule, f: Rule["create"]): Rule {
-  return {
-    ...base,
-    create: function (context) {
-      return f(context);
-    },
-  };
-}
-
 export function changeReport(
   base: Rule,
   f: (params: Params & { report: Context["report"] }) => void,
@@ -24,6 +15,15 @@ export function changeReport(
     };
     return base.create(p);
   });
+}
+
+export function changeRule(base: Rule, f: Rule["create"]): Rule {
+  return {
+    ...base,
+    create: function (context) {
+      return f(context);
+    },
+  };
 }
 
 export function filter(base: Rule, f: (params: Params) => boolean) {
