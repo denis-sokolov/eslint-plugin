@@ -1,3 +1,7 @@
+# 18.0.0
+
+- opinionated now formats significantly
+
 # 17.0.0
 
 - Automatic formatting changed logic.
