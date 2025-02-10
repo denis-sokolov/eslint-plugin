@@ -11,9 +11,9 @@
     "verify": "npm run typecheck && npm run lint && npm run test && npm run format-verify"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.18.0",
-    "@typescript-eslint/parser": "^8.18.0",
-    "@typescript-eslint/utils": "^8.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
+    "@typescript-eslint/utils": "^8.24.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-perfectionist": "^4.2.0",
