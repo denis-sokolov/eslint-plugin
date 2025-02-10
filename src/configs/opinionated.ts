@@ -15,7 +15,7 @@ export const opinionated = {
   rules: {
     ...recommended.rules,
 
-    "@denis-sokolov/max-lines": [2, 200],
+    "@denis-sokolov/max-lines": ["error", 200],
     "@denis-sokolov/no-imports-down": "error",
     "@denis-sokolov/no-imports-up": "error",
     "@denis-sokolov/no-interfaces": "error",
