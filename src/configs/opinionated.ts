@@ -54,15 +54,19 @@ export const opinionated = {
         ],
       },
     ],
-
-    // https://github.com/azat-io/eslint-plugin-perfectionist/issues/222
-    // "perfectionist/sort-objects": ["error", { partitionByNewLine: true }]
-    "perfectionist/sort-interfaces": "off",
-    "perfectionist/sort-object-types": "off",
-    "perfectionist/sort-objects": "off",
-
-    "perfectionist/sort-intersection-types": "off",
-    "perfectionist/sort-union-types": "off",
+    "perfectionist/sort-jsx-props": [
+      "error",
+      { ignoreCase: false, type: "natural" },
+    ],
+    "perfectionist/sort-named-exports": [
+      "error",
+      { groupKind: "types-first", type: "natural" },
+    ],
+    "perfectionist/sort-named-imports": [
+      "error",
+      { groupKind: "types-first", ignoreAlias: true, type: "natural" },
+    ],
+    "perfectionist/sort-objects": ["error", { partitionByNewLine: true }],
 
     "prefer-const": "error",
 
