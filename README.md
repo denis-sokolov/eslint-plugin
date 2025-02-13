@@ -8,6 +8,8 @@ This tool provides some benefits on top of eslint:
 
 [Get started](./docs/setup.md).
 
+[See advanced features](./docs/extra.md).
+
 ## About TheoremOne
 
 ![TheoremOne](docs/images/TheoremOne.png)
