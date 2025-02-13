@@ -1,3 +1,7 @@
+# 18.1.0
+
+- Provides new functions `filter` and `reword` to adjust existing linting rules. [Docs](./docs/extra.md).
+
 # 18.0.0
 
 - opinionated now formats significantly
