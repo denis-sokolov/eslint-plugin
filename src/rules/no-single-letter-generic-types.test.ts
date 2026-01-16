@@ -27,3 +27,15 @@ valid(
   noSingleLetterGenericTypes,
   "const a = new Promise<T>(() => {})",
 );
+
+invalid(
+  "infer simple",
+  noSingleLetterGenericTypes,
+  "type Foo<Something> = Something extends infer T ? T : never;",
+);
+
+invalid(
+  "infer nested",
+  noSingleLetterGenericTypes,
+  "type Foo<Something> = Something extends Array<infer T> ? Map<T> : never;",
+);
