@@ -6,12 +6,7 @@ export const opinionated = {
     ...recommended.extends,
     "plugin:perfectionist/recommended-natural-legacy",
   ],
-  plugins: [
-    ...recommended.plugins,
-    "perfectionist",
-    "sort-keys-plus",
-    "typescript-sort-keys",
-  ],
+  plugins: [...recommended.plugins, "perfectionist", "sort-keys-plus"],
   rules: {
     ...recommended.rules,
 
@@ -40,6 +35,7 @@ export const opinionated = {
 
     "max-params": ["error", 3],
 
+    "perfectionist/sort-interfaces": ["error", { type: "natural" }],
     "perfectionist/sort-imports": [
       "error",
       {
@@ -74,12 +70,6 @@ export const opinionated = {
       "error",
       "asc",
       { allowLineSeparatedGroups: true, natural: true },
-    ],
-
-    "typescript-sort-keys/interface": [
-      "error",
-      "asc",
-      { caseSensitive: false, natural: true },
     ],
   },
 };
