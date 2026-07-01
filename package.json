@@ -25,7 +25,6 @@
     "eslint-plugin-sort-keys-plus": "^1.4.0"
   },
   "devDependencies": {
-    "@denis-sokolov/eslint-plugin": "^18.0.0",
     "@types/node": "^18.19.75",
     "ava": "^6.2.0",
     "eslint": "^8.57.1",
