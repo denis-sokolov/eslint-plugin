@@ -11,6 +11,11 @@ declare module "eslint-plugin-react-hooks" {
   export { rules };
 }
 
+declare module "eslint-plugin-sort-keys-plus" {
+  const rules: Record<string, any>;
+  export { rules };
+}
+
 declare module "@typescript-eslint/eslint-plugin/use-at-your-own-risk/rules" {
   const rules: Record<string, any>;
   export default rules;

@@ -1,20 +1,11 @@
+import { RuleTester } from "@typescript-eslint/rule-tester";
 import { TSESLint } from "@typescript-eslint/utils";
 import test from "ava";
 
 import { type Rule } from "../eslint";
 
-class RuleTester extends TSESLint.RuleTester {
-  constructor() {
-    super({
-      parser: require.resolve("@typescript-eslint/parser"),
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    });
-  }
-}
+RuleTester.afterAll = () => {};
+RuleTester.describe = () => {};
 
 const ruleTester = new RuleTester();
 
