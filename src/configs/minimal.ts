@@ -73,8 +73,7 @@ export const minimal = {
   },
   settings: {
     react: {
-      // Silence the warning for projects that do not use React
-      version: "latest",
+      version: "19.2",
     },
   },
 };
