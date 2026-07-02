@@ -1,5 +1,4 @@
-import { RuleTester } from "@typescript-eslint/rule-tester";
-import { TSESLint } from "@typescript-eslint/utils";
+import { RuleTester, TestCaseError } from "@typescript-eslint/rule-tester";
 import test from "ava";
 
 import { type Rule } from "../eslint";
@@ -22,8 +21,9 @@ export function invalid(
   options: { count?: number; ruleOptions?: unknown[] } = {},
 ) {
   test(name, (t) => {
-    const errors: Omit<TSESLint.TestCaseError<string>, "messageId">[] =
-      Array.from(new Array(options.count || 1)).map(() => ({}));
+    const errors: Omit<TestCaseError<string>, "messageId">[] = Array.from(
+      new Array(options.count || 1),
+    ).map(() => ({}));
     function countPos(s: string) {
       const lines = s.split("\n");
       const last = lines[lines.length - 1];
