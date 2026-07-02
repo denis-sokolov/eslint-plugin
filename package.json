@@ -24,7 +24,7 @@
     "eslint-plugin-typescript-sort-keys": "^3.3.0"
   },
   "devDependencies": {
-    "@denis-sokolov/eslint-plugin": "^16.0.0",
+    "@denis-sokolov/eslint-plugin": "^18.0.0",
     "@types/node": "^18.19.75",
     "ava": "^6.2.0",
     "eslint": "^8.57.1",
