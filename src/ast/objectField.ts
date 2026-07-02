@@ -1,4 +1,4 @@
-import { AST_NODE_TYPES, type TSESTree } from "./types";
+import { type TSESTree, AST_NODE_TYPES } from "./types";
 
 export function objectField(obj: TSESTree.ObjectExpression, key: string) {
   const props = obj.properties

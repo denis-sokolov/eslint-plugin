@@ -39,6 +39,7 @@ export const minimal = {
 
     // React 17
     "react/react-in-jsx-scope": "off",
+
     "react-hooks/rules-of-hooks": "error",
 
     "no-async-promise-executor": "error",

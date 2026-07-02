@@ -1,8 +1,8 @@
 import { type Rule } from "../eslint";
 
 import {
-  importPath,
   type ImportPathDeclaration,
+  importPath,
   parseImportValue,
 } from "./imports";
 

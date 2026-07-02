@@ -1,16 +1,16 @@
 import { flat } from "../flat";
 
-import { AST_NODE_TYPES, type Node, type TSESTree } from "./types";
+import { type Node, type TSESTree, AST_NODE_TYPES } from "./types";
 
 type Result = { name: string; node: Node }[];
 
 export function variableNames(
   expr:
-    | TSESTree.TSEmptyBodyFunctionExpression
-    | TSESTree.Expression
     | TSESTree.AssignmentPattern
     | TSESTree.BindingName
-    | TSESTree.Parameter,
+    | TSESTree.Expression
+    | TSESTree.Parameter
+    | TSESTree.TSEmptyBodyFunctionExpression,
   options: {
     includeDestructuring?: boolean;
   } = {},

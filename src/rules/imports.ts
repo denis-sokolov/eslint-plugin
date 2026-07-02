@@ -1,9 +1,9 @@
 import { type TSESTree } from "../ast";
 
 export type ImportPathDeclaration =
-  | TSESTree.ImportDeclaration
   | TSESTree.ExportAllDeclaration
-  | TSESTree.ExportNamedDeclaration;
+  | TSESTree.ExportNamedDeclaration
+  | TSESTree.ImportDeclaration;
 
 export function importPath(node: ImportPathDeclaration) {
   const { value } = node.source || {};

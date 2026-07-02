@@ -40,7 +40,7 @@ export function filter<Base extends Rule>(
 
 export function reword<Base extends Rule>(
   base: Base,
-  messageOrFunction: string | ((params: Params) => string),
+  messageOrFunction: ((params: Params) => string) | string,
 ): Base {
   const f =
     typeof messageOrFunction === "string"
