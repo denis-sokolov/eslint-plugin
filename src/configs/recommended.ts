@@ -91,5 +91,4 @@ export const recommended = {
     ],
     "react-hooks/exhaustive-deps": "error",
   },
-  settings: { react: { version: "detect" } },
 };
