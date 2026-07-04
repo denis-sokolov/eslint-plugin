@@ -39,3 +39,5 @@ invalid(
   noSingleLetterGenericTypes,
   "type Foo<Something> = Something extends Array<infer T> ? Map<T> : never;",
 );
+
+valid("allow ignored name", noSingleLetterGenericTypes, "type Foo<_> = {}");
