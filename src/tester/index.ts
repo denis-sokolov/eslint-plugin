@@ -11,6 +11,14 @@ const ruleTester = new RuleTester();
 // invalid and valid are more like a DSL than functions
 /* eslint-disable max-params */
 
+const languageOptions = {
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+};
+
 export function invalid(
   name: string,
   rule: Rule,
@@ -77,7 +85,12 @@ export function invalid(
 
     ruleTester.run("dummy rule name for test " + name, ruleProxy, {
       invalid: [
-        { code, errors: errors as any, options: options.ruleOptions || [] },
+        {
+          code,
+          errors: errors as any,
+          languageOptions,
+          options: options.ruleOptions || [],
+        },
       ],
       valid: [],
     });
@@ -97,6 +110,7 @@ export function valid(
       valid: [
         {
           code,
+          languageOptions,
           options: options.ruleOptions || [],
         },
       ],
