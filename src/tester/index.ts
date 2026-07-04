@@ -4,7 +4,8 @@ import test from "ava";
 import { type Rule } from "../eslint";
 
 RuleTester.afterAll = () => {};
-RuleTester.describe = () => {};
+RuleTester.describe = (_, f) => f();
+RuleTester.it = (_, f) => f();
 
 const ruleTester = new RuleTester();
 
@@ -29,9 +30,11 @@ export function invalid(
   options: { count?: number; ruleOptions?: unknown[] } = {},
 ) {
   test(name, (t) => {
-    const errors: Omit<TestCaseError<string>, "messageId">[] = Array.from(
-      new Array(options.count || 1),
-    ).map(() => ({}));
+    const errors: (Omit<TestCaseError<string>, "messageId"> & {
+      message: RegExp;
+    })[] = Array.from(new Array(options.count || 1)).map(() => ({
+      message: /^/,
+    }));
     function countPos(s: string) {
       const lines = s.split("\n");
       const last = lines[lines.length - 1];
