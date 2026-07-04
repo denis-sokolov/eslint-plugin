@@ -1,4 +1,4 @@
-import { RuleTester, type TestCaseError } from "@typescript-eslint/rule-tester";
+import { type TestCaseError, RuleTester } from "@typescript-eslint/rule-tester";
 import test from "ava";
 
 import { type Rule } from "../eslint";
@@ -49,7 +49,33 @@ export function invalid(
       errNum += 1;
     }
 
-    ruleTester.run("dummy rule name for test " + name, rule as any, {
+    const ruleProxy: Parameters<typeof ruleTester.run>[1] = {
+      ...rule,
+      create: (context) => {
+        const newContext: typeof context = Object.create(
+          (context as any).__proto__,
+        );
+        Object.assign(newContext, {
+          ...context,
+          report: (desc) => {
+            context.report({
+              ...desc,
+              // Pretend our rules give no suggestions, so that the tester does not raise
+              // false alarms about the assertions not having the right amount of suggestions.
+              suggest: [],
+            });
+          },
+        } satisfies typeof context);
+        return rule.create(newContext as any) as any;
+      },
+      meta: {
+        messages: {},
+        schema: {} as any,
+        type: "problem",
+      },
+    };
+
+    ruleTester.run("dummy rule name for test " + name, ruleProxy, {
       invalid: [
         { code, errors: errors as any, options: options.ruleOptions || [] },
       ],
