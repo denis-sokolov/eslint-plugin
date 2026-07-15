@@ -6,39 +6,22 @@ Install the tools:
 npm install --save eslint @denis-sokolov/eslint-plugin
 ```
 
-Create a minimal `.eslintrc.js` file:
+Create a minimal `eslint.config.mjs` file:
 
 ```js
-module.exports = {
-  plugins: ["@denis-sokolov"],
-};
+import denisSokolov from "@denis-sokolov/eslint-plugin";
+import { defineConfig } from "eslint/config";
+
+export default defineConfig([
+  {
+    extends: denisSokolov.configs.recommended,
+  },
+]);
 ```
 
-Choose a ruleset and add it to the config above:
+For existing big projects, replace the ruleset above with `denisSokolov.configs.minimal`.
 
-```js
-{
-  // For existing big projects that have a lot of warnings
-  extends: ["plugin:@denis-sokolov/minimal"],
-  // For a good compromise
-  extends: ["plugin:@denis-sokolov/recommended"],
-  // For new projects
-  extends: ["plugin:@denis-sokolov/opinionated"],
-}
-```
-
-Let eslint know whether you run in Browser or in Node and if you have some [test tools that use globals](https://eslint.org/docs/user-guide/configuring#specifying-environments):
-
-```js
-{
-  env: {
-    browser: true,
-    node: true
-  }
-}
-```
-
-If you choose browser-only above, you may need to add `ignorePatterns: ["*.js"]` to the config to not have eslint complain about module.exports use in configuration files.
+For new projects, replace the ruleset above with `denisSokolov.configs.opinionated`.
 
 Add a script to your package.json:
 
@@ -52,14 +35,17 @@ Add a script to your package.json:
 
 Run with `npm run lint` and address the concerns.
 
-If you want to postpone handling a rule for later, or if you disagree with a rule (let us know!), disable in your .eslintrc.js:
+If you want to postpone handling a rule for later, or if you disagree with a rule (let us know!), disable in your eslint.config.js:
 
 ```js
-module.exports = {
-  rules: {
-    "react-hooks/exhaustive-deps": "off",
+export default defineConfig([
+  {
+    extends: denisSokolov.configs.recommended,
+    rules: {
+      "react-hooks/exhaustive-deps": "off",
+    },
   },
-};
+]);
 ```
 
 Finally, once linting shows no errors, add it to your CI run to ensure the expected level going forward.
@@ -67,15 +53,17 @@ Finally, once linting shows no errors, add it to your CI run to ensure the expec
 ## Rule options
 
 ```js
-module.exports = {
-  rules: {
-    "no-imports-down": [
-      "error",
-      {
-        // Whitelist some paths as allowed
-        ignoreRegexes: ["^lib/icons"],
-      },
-    ],
+export default defineConfig([
+  {
+    rules: {
+      "no-imports-down": [
+        "error",
+        {
+          // Whitelist some paths as allowed
+          ignoreRegexes: ["^lib/icons"],
+        },
+      ],
+    },
   },
-};
+]);
 ```
