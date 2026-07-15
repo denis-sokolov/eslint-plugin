@@ -1,3 +1,7 @@
+# 20.0.0
+
+- Breaking ESM exports
+
 # 19.0.0
 
 - Breaking: switch to ESLint 9 and the flat configs.
