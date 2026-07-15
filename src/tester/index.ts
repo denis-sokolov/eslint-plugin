@@ -1,4 +1,4 @@
-import { RuleTester, TestCaseError } from "@typescript-eslint/rule-tester";
+import { RuleTester, type TestCaseError } from "@typescript-eslint/rule-tester";
 import test from "ava";
 
 import { type Rule } from "../eslint";
