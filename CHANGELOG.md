@@ -1,3 +1,7 @@
+# 19.0.0
+
+- Breaking: switch to ESLint 9 and the flat configs.
+
 # 18.1.0
 
 - Provides new functions `filter` and `reword` to adjust existing linting rules. [Docs](./docs/extra.md).
